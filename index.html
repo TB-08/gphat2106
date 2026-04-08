@@ -102,11 +102,11 @@
                     const splash = document.getElementById('splash-screen');
                     if(splash) {
                         splash.classList.add('splash-hidden');
+                        // Start animations immediately as splash fades
+                        window.dispatchEvent(new Event('splashDone'));
                         setTimeout(function() {
                             splash.style.display = 'none';
                             document.body.classList.remove('no-scroll');
-                            // Fire custom event so AOS + counter start NOW
-                            window.dispatchEvent(new Event('splashDone'));
                         }, 1000);
                     } else {
                          document.body.classList.remove('no-scroll');
