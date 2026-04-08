@@ -155,7 +155,7 @@
                         Vietnam's Leading Manufacturer
                     </span>
 <h1 class="font-headline text-6xl md:text-8xl font-extrabold text-white leading-none tracking-tighter mb-6" data-aos="fade-up" data-aos-delay="100">
-    <span class="text-primary">100,000</span> tons/year capacity
+    <span class="text-primary counter" data-target="100000">0</span> tons/year capacity
 </h1>
 <p class="font-body text-xl text-primary-fixed leading-relaxed mb-10 max-w-lg" data-aos="fade-up" data-aos-delay="200">
     Leading Wood Pellet Manufacturer in Vietnam, driving global energy transitions with industrial scale and organic precision.
@@ -448,20 +448,30 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const initAOS = () => {
-            AOS.init({
-                duration: 900,
-                once: true,
-                offset: 60,
-                easing: 'ease-out-quad'
-            });
+        // Counter animation
+        const animateCounter = (el) => {
+            const target = +el.getAttribute('data-target');
+            const duration = 1200;
+            const start = performance.now();
+            const step = (now) => {
+                const p = Math.min((now - start) / duration, 1);
+                const ease = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
+                el.innerText = Math.ceil(target * ease).toLocaleString();
+                if (p < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+        };
+
+        const startAll = () => {
+            AOS.init({ duration: 900, once: true, offset: 60, easing: 'ease-out-quad' });
+            document.querySelectorAll('.counter').forEach(el => animateCounter(el));
         };
 
         const splash = document.getElementById('splash-screen');
         if (splash && getComputedStyle(splash).display !== 'none') {
-            window.addEventListener('splashDone', initAOS, { once: true });
+            window.addEventListener('splashDone', startAll, { once: true });
         } else {
-            initAOS();
+            startAll();
         }
     });
 </script>
