@@ -85,8 +85,8 @@
             background: linear-gradient(to bottom, var(--tw-bg-opacity, 1) rgba(248, 250, 249, 1), rgba(242, 244, 243, 1));
         }
         /* Hero CSS animations - GPU accelerated, no jank */
-        .hero-el { opacity: 0; transform: translateY(30px); }
-        .hero-el-zoom { opacity: 0; transform: scale(0.9); }
+        .hero-el { opacity: 0; transform: translateY(30px); will-change: transform, opacity; }
+        .hero-el-zoom { opacity: 0; transform: scale(0.9); will-change: transform, opacity; }
         .hero-animate .hero-el {
             animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
@@ -166,7 +166,7 @@
 <!-- Hero Section -->
 <section id="hero-section" class="relative min-h-screen flex items-center pt-20 pb-12 md:pb-24 overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover grayscale-[20%] contrast-[110%]" data-alt="Industrial Port" src="anh-cang.jpg"/>
+<img class="w-full h-full object-cover grayscale-[20%] contrast-[110%]" data-alt="Industrial Port" src="anh-cang.jpg" decoding="async" loading="eager"/>
 <div class="absolute inset-0 bg-gradient-to-r from-primary-dark/90 via-primary-dark/40 to-transparent"></div>
 </div>
 <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
@@ -483,13 +483,7 @@
             }
         });
 
-        // Init AOS immediately for scroll content
-        AOS.init({
-            duration: 1000, 
-            once: true, 
-            offset: 50,
-            easing: 'ease-out-cubic'
-        });
+
 
         // Counter Animation (pure JS, no layout thrash)
         const animateCounter = (counter) => {
@@ -510,6 +504,16 @@
             const hero = document.getElementById('hero-section');
             if (hero) hero.classList.add('hero-animate');
             document.querySelectorAll('.counter').forEach(el => animateCounter(el));
+            
+            // Delay AOS initialization to avoid CPU spike during transition
+            setTimeout(() => {
+                AOS.init({
+                    duration: 1000, 
+                    once: true, 
+                    offset: 50,
+                    easing: 'ease-out-cubic'
+                });
+            }, 1000); 
         };
 
         const splash = document.getElementById('splash-screen');
