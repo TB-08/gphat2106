@@ -105,9 +105,12 @@
                         setTimeout(function() {
                             splash.style.display = 'none';
                             document.body.classList.remove('no-scroll');
+                            // Fire custom event so AOS + counter start NOW
+                            window.dispatchEvent(new Event('splashDone'));
                         }, 1000);
                     } else {
                          document.body.classList.remove('no-scroll');
+                         window.dispatchEvent(new Event('splashDone'));
                     }
                 }, 2500);
             });
@@ -445,6 +448,7 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
+        // Prepare AOS attributes on elements
         const fadeUpSelectors = [
             'section > div > div > h2', 
             'section > div > div > p', 
@@ -459,7 +463,6 @@
             }
         });
         
-        // Add zoom-in to some large elements
         document.querySelectorAll('h1').forEach(el => {
             if(!el.hasAttribute('data-aos') && !el.closest('#splash-screen')) {
                 el.setAttribute('data-aos', 'zoom-out');
@@ -467,30 +470,17 @@
             }
         });
 
-        AOS.init({
-            duration: 1000, 
-            once: true, 
-            offset: 50,
-            easing: 'ease-out-cubic'
-        });
-
         // Counter Animation
         const animateCounter = (counter) => {
             const target = +counter.getAttribute('data-target');
-            let count = 0;
-            const duration = 1200; // Match the 1.2s beat
+            const duration = 1200;
             const startTime = performance.now();
 
             const update = (currentTime) => {
                 const elapsed = currentTime - startTime;
                 const progress = Math.min(elapsed / duration, 1);
-                
-                // Easing function for smoothness (easeOutExpo)
                 const easedProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-                
-                count = target * easedProgress;
-                counter.innerText = Math.ceil(count).toLocaleString();
-
+                counter.innerText = Math.ceil(target * easedProgress).toLocaleString();
                 if (progress < 1) {
                     requestAnimationFrame(update);
                 } else {
@@ -500,36 +490,32 @@
             requestAnimationFrame(update);
         };
 
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                // If it's the hero counter (top of page), start immediately
-                // For others, wait until they are mostly visible
-                if(entry.isIntersecting) {
-                    animateCounter(entry.target);
-                    counterObserver.unobserve(entry.target);
-                }
+        // Function to start all animations
+        const startAllAnimations = () => {
+            // Initialize AOS fresh (after splash is gone)
+            AOS.init({
+                duration: 1000, 
+                once: true, 
+                offset: 50,
+                easing: 'ease-out-cubic'
             });
-        }, { threshold: 0 }); // 0 threshold for instant trigger
+            // Force AOS to re-check all elements
+            setTimeout(() => AOS.refresh(), 50);
 
-        document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
-
-        // Start hero counters after splash screen or immediately
-        const startInitialCounters = () => {
+            // Start counters in viewport
             document.querySelectorAll('.counter').forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top >= 0 && rect.top <= window.innerHeight) {
-                    animateCounter(el);
-                    counterObserver.unobserve(el);
-                }
+                animateCounter(el);
             });
         };
 
+        // Check if splash screen exists and is active
         const splash = document.getElementById('splash-screen');
         if (splash && getComputedStyle(splash).display !== 'none') {
-            // Wait for the exact moment splash is hidden (approx 3.5s total)
-            setTimeout(startInitialCounters, 3500);
+            // Wait for the custom 'splashDone' event
+            window.addEventListener('splashDone', startAllAnimations, { once: true });
         } else {
-            startInitialCounters();
+            // No splash, start immediately
+            startAllAnimations();
         }
     });
 </script>
