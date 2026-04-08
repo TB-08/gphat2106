@@ -261,25 +261,41 @@
 </div>
 </div>
 </footer>
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // dynamically add data-aos
-        const selectors = [
+        const fadeUpSelectors = [
             'section > div > div > h2', 
-            'section p', 
+            'section > div > div > p', 
             '.group', 
             'section img',
-            '.grid > div', 
-            'footer > div > div'
+            '.grid > div'
         ];
-        document.querySelectorAll(selectors.join(', ')).forEach(el => {
-            if(!el.hasAttribute('data-aos') && !el.closest('header')) {
+        document.querySelectorAll(fadeUpSelectors.join(', ')).forEach((el, index) => {
+            if(!el.hasAttribute('data-aos') && !el.closest('header') && !el.closest('#splash-screen')) {
                 el.setAttribute('data-aos', 'fade-up');
+                el.setAttribute('data-aos-delay', (index % 4) * 100);
             }
         });
-        AOS.init({duration: 800, once: true, offset: 50});
+        
+        // Add zoom-in to some large elements
+        document.querySelectorAll('h1').forEach(el => {
+            if(!el.hasAttribute('data-aos') && !el.closest('#splash-screen')) {
+                el.setAttribute('data-aos', 'zoom-out');
+                el.setAttribute('data-aos-duration', '1200');
+            }
+        });
+
+        AOS.init({
+            duration: 1000, 
+            once: true, 
+            offset: 50,
+            easing: 'ease-out-cubic'
+        });
     });
 </script>
 </body></html>
+
+
 
