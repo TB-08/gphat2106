@@ -85,8 +85,39 @@
             background: linear-gradient(to bottom, var(--tw-bg-opacity, 1) rgba(248, 250, 249, 1), rgba(242, 244, 243, 1));
         }
     </style>
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
 </head>
 <body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- Splash Screen -->
+<div id="splash-screen" class="fixed inset-0 z-[100] flex items-center justify-center bg-surface transition-opacity duration-1000">
+    <div class="text-4xl md:text-6xl font-extrabold tracking-tighter text-emerald-900 font-headline uppercase" style="animation: pulseLogo 2s ease-in-out forwards;">
+        DOHWA RESOURCE
+    </div>
+</div>
+<style>
+    @keyframes pulseLogo {
+        0% { opacity: 0; transform: scale(0.9); }
+        50% { opacity: 1; transform: scale(1.05); }
+        100% { opacity: 1; transform: scale(1); }
+    }
+    .splash-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+</style>
+<script>
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            const splash = document.getElementById('splash-screen');
+            if(splash) {
+                splash.classList.add('splash-hidden');
+                setTimeout(function() {
+                    splash.style.display = 'none';
+                }, 1000);
+            }
+        }, 1500);
+    });
+</script>
 <!-- Top Navigation Shell -->
 <header class="bg-emerald-50/80 backdrop-blur-md fixed top-0 w-full z-50 shadow-sm">
 <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
@@ -324,4 +355,25 @@
 </div>
 </div>
 </footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // dynamically add data-aos
+        const selectors = [
+            'section > div > div > h2', 
+            'section p', 
+            '.group', 
+            'section img',
+            '.grid > div', 
+            'footer > div > div'
+        ];
+        document.querySelectorAll(selectors.join(', ')).forEach(el => {
+            if(!el.hasAttribute('data-aos') && !el.closest('header')) {
+                el.setAttribute('data-aos', 'fade-up');
+            }
+        });
+        AOS.init({duration: 800, once: true, offset: 50});
+    });
+</script>
 </body></html>
+
