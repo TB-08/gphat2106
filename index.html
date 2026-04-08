@@ -478,29 +478,36 @@
         const animateCounter = (counter) => {
             const target = +counter.getAttribute('data-target');
             let count = 0;
-            const duration = 2000; // 2 seconds
-            const increment = target / (duration / 16); // 60fps
+            const duration = 1000; // 1 second for faster speed
+            const startTime = performance.now();
 
-            const update = () => {
-                count += increment;
-                if (count < target) {
-                    counter.innerText = Math.ceil(count).toLocaleString();
+            const update = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing function for smoothness (easeOutExpo)
+                const easedProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+                
+                count = target * easedProgress;
+                counter.innerText = Math.ceil(count).toLocaleString();
+
+                if (progress < 1) {
                     requestAnimationFrame(update);
                 } else {
                     counter.innerText = target.toLocaleString();
                 }
             };
-            update();
+            requestAnimationFrame(update);
         };
 
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if(entry.isIntersecting) {
-                    setTimeout(() => animateCounter(entry.target), 600); // Wait for AOS zoom
+                    animateCounter(entry.target); // Start immediately
                     counterObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.1 });
 
         document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
     });
