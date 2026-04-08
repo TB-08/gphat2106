@@ -54,6 +54,7 @@
             text-orientation: mixed;
         }
     </style>
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
 </head>
 <body class="bg-surface font-body text-on-surface">
 <!-- TopNavBar Component -->
@@ -204,4 +205,25 @@
 <p class="text-zinc-500 dark:text-zinc-400 text-xs font-body opacity-80">© 2024 DOHWA RESOURCE DEVELOPMENT. All Rights Reserved.</p>
 </div>
 </footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // dynamically add data-aos
+        const selectors = [
+            'section > div > div > h2', 
+            'section p', 
+            '.group', 
+            'section img',
+            '.grid > div', 
+            'footer > div > div'
+        ];
+        document.querySelectorAll(selectors.join(', ')).forEach(el => {
+            if(!el.hasAttribute('data-aos') && !el.closest('header')) {
+                el.setAttribute('data-aos', 'fade-up');
+            }
+        });
+        AOS.init({duration: 800, once: true, offset: 50});
+    });
+</script>
 </body></html>
+
