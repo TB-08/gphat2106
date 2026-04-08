@@ -90,10 +90,7 @@
 <body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
 <script>
     try {
-        const hasSeenSession = sessionStorage.getItem('splashShown') === 'true' || window.location.hash === '#seen';
-        const lastSeenLocal = localStorage.getItem('hasSeenSplash');
-        const hasSeenLocal = lastSeenLocal && (Date.now() - parseInt(lastSeenLocal)) < 3600000; // 1 hour
-        const hasSeen = hasSeenSession || hasSeenLocal;
+        const hasSeen = sessionStorage.getItem('splashShown') === 'true' || window.location.hash === '#seen';
 
         if (!hasSeen) {
             document.write('<div id="splash-screen" class="fixed inset-0 z-[100] flex items-center justify-center bg-white transition-opacity duration-1000"><img src="logo.png" alt="DOHWA Logo" class="h-24 md:h-32 w-auto object-contain drop-shadow-xl" style="animation: pulseLogo 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;" /></div>');
@@ -115,7 +112,6 @@
                 }, 2500);
             });
             try { sessionStorage.setItem('splashShown', 'true'); } catch(e) {}
-            try { localStorage.setItem('hasSeenSplash', Date.now().toString()); } catch(e) {}
             if(window.history.replaceState) {
                 window.history.replaceState(null, null, window.location.pathname + '#seen');
             }
@@ -399,6 +395,7 @@
     });
 </script>
 </body></html>
+
 
 
 
