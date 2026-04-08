@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | DOHWA RESOURCE DEVELOPMENT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#039248",
+                        "primary-dark": "#014342",
+                        "on-surface": "#191c1c",
+                        "surface-variant": "#e1e3e2",
+                        "tertiary": "#452805",
+                        "on-background": "#191c1c",
+                        "surface-dim": "#d8dad9",
+                        "surface": "#f8faf9",
+                        "background": "#f8faf9",
+                        "surface-container-highest": "#e1e3e2",
+                        "surface-container-high": "#e6e9e8",
+                        "surface-container": "#eceeed",
+                        "surface-container-low": "#f2f4f3",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#727974",
+                        "outline-variant": "#c1c8c3",
+                        "on-surface-variant": "#424844"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "1rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-emerald-50/80 dark:bg-zinc-950/80 backdrop-blur-md shadow-sm dark:shadow-none border-b border-zinc-100/50 dark:border-zinc-800/50">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-emerald-900 dark:text-emerald-50 font-headline uppercase">DOHWA RESOURCE DEVELOPMENT</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors font-headline font-bold tracking-tight" href="index.html">Home</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors font-headline font-bold tracking-tight" href="About us.html">About Us</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors font-headline font-bold tracking-tight" href="Product.html">Products</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors font-headline font-bold tracking-tight" href="Certification.html">Certifications</a>
+<a class="text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700 dark:border-emerald-400 pb-1 font-headline font-bold tracking-tight" href="Contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="text-emerald-900 dark:text-emerald-50 font-headline tracking-tight font-bold uppercase text-xs">EN / VI / JP</div>
+</div>
+</div>
+</nav>
+<!-- SideNavBar Component -->
+<div class="fixed right-0 top-1/2 -translate-y-1/2 rounded-l-md z-40 flex flex-col bg-emerald-900 dark:bg-emerald-950 shadow-[0_20px_40px_rgba(1,67,66,0.1)] hover:translate-x-[-4px] transition-transform cursor-pointer group">
+<div class="bg-emerald-800 text-white p-4 flex flex-col items-center gap-2 group-hover:bg-emerald-700 transition-colors">
+<span class="material-symbols-outlined text-white" data-icon="payments">payments</span>
+<span class="font-headline font-bold uppercase tracking-widest text-[10px] text-white text-center vertical-text">Get a Quote</span>
+</div>
+</div>
+<main class="pt-16 min-h-screen">
+<div class="max-w-[1440px] mx-auto px-0 md:flex min-h-[calc(100vh-64px)]">
+<!-- Left Section: Inquiry Form -->
+<section class="w-full md:w-1/2 p-8 md:p-16 lg:p-24 bg-surface-container-low">
+<div class="max-w-xl mx-auto">
+<span class="text-primary font-label text-xs font-bold uppercase tracking-[0.2em] mb-4 block">Direct Partnership</span>
+<h1 class="text-4xl md:text-5xl font-headline font-black text-primary-dark tracking-tight mb-8">B2B Inquiry</h1>
+<p class="text-on-surface-variant mb-12 leading-relaxed">Connect with our distribution team for global wood pellet supply. Provide your company details below for a customized technical specification and volume pricing.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold font-label uppercase text-on-surface-variant tracking-wider">Full Name</label>
+<input class="w-full bg-white border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary/20 rounded px-4 py-3 text-on-surface placeholder:text-outline/50 transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold font-label uppercase text-on-surface-variant tracking-wider">Company Name</label>
+<input class="w-full bg-white border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary/20 rounded px-4 py-3 text-on-surface placeholder:text-outline/50 transition-all" placeholder="Industrial Corp" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold font-label uppercase text-on-surface-variant tracking-wider">Business Email</label>
+<input class="w-full bg-white border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary/20 rounded px-4 py-3 text-on-surface placeholder:text-outline/50 transition-all" placeholder="contact@company.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold font-label uppercase text-on-surface-variant tracking-wider">Phone Number</label>
+<input class="w-full bg-white border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary/20 rounded px-4 py-3 text-on-surface placeholder:text-outline/50 transition-all" placeholder="+84 ..." type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold font-label uppercase text-on-surface-variant tracking-wider">Message / Specific Requirements</label>
+<textarea class="w-full bg-white border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary/20 rounded px-4 py-3 text-on-surface placeholder:text-outline/50 transition-all" placeholder="Volume requirements, destination port, etc." rows="4"></textarea>
+</div>
+<button class="bg-primary-dark text-white w-full md:w-auto px-12 py-4 font-headline font-bold text-sm tracking-widest uppercase hover:bg-primary transition-all shadow-lg flex items-center justify-center gap-3 rounded" type="submit">
+                            Submit Inquiry
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</form>
+</div>
+</section>
+<!-- Right Section: Contact Info -->
+<section class="w-full md:w-1/2 relative flex flex-col overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-primary-dark/70 z-10"></div>
+<img class="w-full h-full object-cover" data-alt="high-contrast wide shot of industrial seaport logistics center with shipping containers and wood resources under atmospheric cloudy sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8tn5-noHAftrwNnm9TvkSO5TBJV2pK02OEc8HKdPXYzpN0tEEL-f-5GXlkMmjDTPGQlIyIaBgCvA3sZbs8w5JsNdRPD8Yc6z167t7ktvvUBs3hTtT3gMpEKBchom0J7b0bFNBhzsyRTHDEn6pVyzK1n957W_oAwg3ig-GWPq4yhAUJeXv8wbR3tPYlFR8c4dAtNG4aDXuRnOP89tvpZt462cump0JwqMLBOm58sPntBGfSAH1D0rczfzQfMOG0SAOyNcpeUCuEO-C"/>
+</div>
+<div class="relative z-20 flex-grow flex flex-col p-8 md:p-16 lg:p-24 justify-end">
+<div class="bg-white/10 backdrop-blur-md p-8 border border-white/20 rounded-lg shadow-2xl">
+<h2 class="text-white font-headline font-black text-3xl mb-8 tracking-tight">Factory Headquarters</h2>
+<div class="grid grid-cols-1 gap-8">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<div>
+<h4 class="text-xs font-bold font-label uppercase text-emerald-200 tracking-widest mb-1">Global Operations</h4>
+<p class="text-white font-body leading-relaxed">Near Hon La Seaport, Quang Trach District,<br/>Quang Binh Province, Vietnam</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+<div>
+<h4 class="text-xs font-bold font-label uppercase text-emerald-200 tracking-widest mb-1">Electronic Mail</h4>
+<p class="text-white font-body">export@dohwaresource.com</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+<div>
+<h4 class="text-xs font-bold font-label uppercase text-emerald-200 tracking-widest mb-1">Support Line</h4>
+<p class="text-white font-body">+84 (0) 232 359 123</p>
+</div>
+</div>
+</div>
+<div class="mt-12 h-64 w-full bg-zinc-800 overflow-hidden rounded border border-white/10 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="w-full h-full relative flex items-center justify-center" data-location="Hon La Seaport, Vietnam">
+<img class="w-full h-full object-cover opacity-60" data-alt="clean minimalist geographic map interface focused on the coastal region of central vietnam near hon la seaport" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG0IVp49m0FfDfz9vLFz5BQbxcauXajsS1BGxwAEwAxNzF2G6skS2X1P4OeeTlYQx9gqJgPsk8qQQt_hpx5NQus3hlV4SUfZLRoSwa7sbiCW5rqUH6rj86IXIB0yUPj91A0s8iu6RZybjxTc_TLON31tgmzaelZcTAx1Wi_YmkZvu3_Tuty0VqFC3KGUY04OanzkgPgw5AzlPWP9edcXTs_QfhLClP4361MjZJf1ZWo9nvhaovepZFU5WCr5LFZ3ty0UXQ9dt3y7gB"/>
+<div class="absolute inset-0 bg-primary-dark/20"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="location_pin" style="font-variation-settings: 'FILL' 1;">location_pin</span>
+<div class="bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-tighter shadow-xl mt-2 text-primary-dark rounded-sm">DOHWA FACTORY</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="w-full border-t border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-12 py-16 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-lg font-bold text-emerald-900 dark:text-emerald-50 font-headline">DOHWA</div>
+<p class="text-zinc-500 dark:text-zinc-400 font-body text-sm leading-relaxed">Leading the renewable energy transition through sustainable wood resource development and global biomass supply chain excellence.</p>
+</div>
+<div>
+<h4 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6 font-headline uppercase text-xs tracking-widest">Navigation</h4>
+<ul class="space-y-3">
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors text-sm font-body" href="index.html">Home</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors text-sm font-body" href="About us.html">About Us</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors text-sm font-body" href="Product.html">Products</a></li>
+<li><a class="text-emerald-700 dark:text-emerald-300 font-semibold text-sm font-body" href="Contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6 font-headline uppercase text-xs tracking-widest">Legal</h4>
+<ul class="space-y-3">
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors text-sm font-body" href="#">Privacy Policy</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors text-sm font-body" href="#">Terms of Service</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors text-sm font-body" href="#">Environmental Impact</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors text-sm font-body" href="#">Sustainability Report</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6 font-headline uppercase text-xs tracking-widest">Global Desk</h4>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm font-body leading-relaxed">
+                    Hon La Industrial Zone<br/>
+                    Quang Binh, VN 510000<br/><br/>
+                    Mon - Fri: 08:00 - 18:00 (GMT+7)
+                </p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 py-6 border-t border-zinc-200 dark:border-zinc-800">
+<p class="text-zinc-500 dark:text-zinc-400 text-xs font-body opacity-80">© 2024 DOHWA RESOURCE DEVELOPMENT. All Rights Reserved.</p>
+</div>
+</footer>
+</body></html>
