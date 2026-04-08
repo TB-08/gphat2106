@@ -3,9 +3,8 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Wood Pellets | DOHWA RESOURCE DEVELOPMENT</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -15,50 +14,17 @@
                         "primary": "#039248",
                         "primary-dark": "#014342",
                         "on-surface": "#191c1c",
-                        "surface-variant": "#e1e3e2",
-                        "tertiary-container": "#5f3e19",
-                        "primary-container": "#2d4b3e",
-                        "on-primary": "#ffffff",
-                        "surface-container-highest": "#e1e3e2",
-                        "secondary-fixed-dim": "#c2c8c4",
-                        "inverse-primary": "#adcebd",
-                        "on-primary-fixed-variant": "#2f4d40",
-                        "on-background": "#191c1c",
-                        "on-error-container": "#93000a",
-                        "surface-dim": "#d8dad9",
-                        "on-secondary-fixed": "#171d1a",
-                        "on-secondary-container": "#606662",
-                        "surface-bright": "#f8faf9",
                         "surface": "#f8faf9",
-                        "on-secondary-fixed-variant": "#424845",
-                        "on-primary-container": "#99baa9",
-                        "background": "#f8faf9",
-                        "surface-container-lowest": "#ffffff",
-                        "error": "#ba1a1a",
-                        "surface-container-high": "#e6e9e8",
-                        "primary-fixed": "#c8ead8",
-                        "secondary-fixed": "#dee4e0",
-                        "on-secondary": "#ffffff",
-                        "on-surface-variant": "#424844",
-                        "secondary": "#5a605c",
-                        "inverse-on-surface": "#eff1f0",
-                        "primary-fixed-dim": "#adcebd",
-                        "outline-variant": "#c1c8c3",
-                        "on-primary-fixed": "#012116",
-                        "tertiary-fixed": "#ffdcbd",
-                        "surface-tint": "#039248",
-                        "outline": "#727974",
-                        "tertiary": "#452805",
-                        "on-error": "#ffffff",
                         "surface-container": "#eceeed",
-                        "on-tertiary-container": "#d9aa7c",
-                        "on-tertiary-fixed-variant": "#61401b",
                         "surface-container-low": "#f2f4f3",
-                        "error-container": "#ffdad6",
-                        "on-tertiary-fixed": "#2c1600",
-                        "secondary-container": "#dee4e0",
-                        "inverse-surface": "#2e3131",
-                        "on-tertiary": "#ffffff"
+                        "surface-container-high": "#e6e9e8",
+                        "on-surface-variant": "#424844",
+                        "outline-variant": "#c1c8c3",
+                        "tertiary-container": "#014342",
+                        "on-tertiary-container": "#ffffff",
+                        "primary-container": "#039248",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#ffffff"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.25rem",
@@ -67,27 +33,25 @@
                         "full": "9999px"
                     },
                     "fontFamily": {
-                        "headline": ["Manrope"],
-                        "body": ["Manrope"],
-                        "label": ["Manrope"]
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
                     }
-                },
-            },
+                }
+            }
         }
     </script>
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        body { font-family: 'Manrope', sans-serif; }
-        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
-        .writing-mode-vertical {
-            writing-mode: vertical-rl;
+        .tonal-shift {
+            background: linear-gradient(180deg, rgba(248, 250, 249, 0) 0%, #f8faf9 100%);
         }
     </style>
 <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
 </head>
-<body class="bg-surface text-on-surface selection:bg-primary selection:text-white">
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30 selection:text-primary-dark">
 <script>
     try {
         const hasSeen = sessionStorage.getItem('splashShown') === 'true' || window.location.hash === '#seen';
@@ -132,20 +96,14 @@
 <div class="text-emerald-900 font-bold text-sm tracking-widest">EN / VI / JP</div>
 </div>
 </header>
-<!-- SideNavBar (Inquiry CTA) -->
-<div class="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex flex-col bg-emerald-900 rounded-l-md shadow-[0_20px_40px_rgba(1,67,66,0.1)] hover:translate-x-[-4px] transition-transform">
-<button class="bg-emerald-600 text-white p-4 flex flex-col items-center gap-2 cursor-pointer active:brightness-90">
-<span class="material-symbols-outlined" data-icon="payments">payments</span>
-<span class="font-['Manrope'] font-bold uppercase tracking-widest text-[10px] writing-mode-vertical">Request Quote</span>
-</button>
-</div>
+
 <main class="pt-24 pb-20">
 <!-- Hero Section -->
 <section class="max-w-7xl mx-auto px-8 mb-16">
 <div class="relative overflow-hidden bg-primary-dark h-[500px] flex items-center rounded-lg">
 <div class="absolute inset-0 z-0">
-<img alt="Industrial Wood Pellets" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4OvG5U0XAC_PUK3Vha3QDDiRSjM6tUjCv_W6stKKXO0z4kx8bW5bfaFdlchVydva5SD192LVWrBdR40TGyxmKlZFnAOrMWrWolKVqAM04zAkpzNzo7SKwlsMKVvl5yedgvBQcy4mv5v3bqO_N7AYno3efDcoxfoA1NxDuILlmBlAVwCyQfY8pZ-Iew7OCXdmZAVoqirsBshE1uP9G1wh2ywbRhsQvh3D-e6clS-t8IZ3XGfQgOFqqwTEzmrmhT--DVpyP2WtxHe0v"/>
-<div class="absolute inset-0 bg-emerald-900/70"></div>
+<img alt="High-Density Wood Pellets" class="w-full h-full object-cover" src="product-hero.jpg"/>
+<div class="absolute inset-0 bg-emerald-900/40"></div>
 </div>
 <div class="relative z-10 px-12 max-w-2xl">
 <span class="text-white font-label text-sm uppercase tracking-widest mb-4 block font-bold" data-aos="fade-down" data-aos-duration="800" data-aos-delay="0">Premium Biofuel Solution</span>
@@ -178,160 +136,105 @@
 <span class="text-on-surface-variant">≤ 0.7% (Dry Basis)</span>
 </div>
 <div class="flex justify-between py-4 border-b border-outline-variant/20">
-<span class="font-semibold text-primary-dark">Net Calorific Value</span>
-<span class="text-on-surface-variant">≥ 16.5 MJ/kg</span>
-</div>
-<div class="flex justify-between py-4 border-b border-outline-variant/20">
-<span class="font-semibold text-primary-dark">Moisture Content</span>
+<span class="font-semibold text-primary-dark">Moisture</span>
 <span class="text-on-surface-variant">≤ 10%</span>
 </div>
+<div class="flex justify-between py-4 border-b border-outline-variant/20">
+<span class="font-semibold text-primary-dark">Calorific Value</span>
+<span class="text-on-surface-variant">≥ 17.5 MJ/kg (As Received)</span>
 </div>
 </div>
-<div class="lg:col-span-7 grid grid-cols-2 gap-4">
-<div class="bg-zinc-100 p-8 flex flex-col justify-between rounded-lg">
-<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="local_fire_department">local_fire_department</span>
+</div>
+<div class="lg:col-span-1 hidden lg:block"></div>
+<div class="lg:col-span-6">
+<div class="bg-surface-container rounded-lg p-10 h-full border border-outline-variant/20">
+<h3 class="font-headline font-bold text-xl text-primary-dark mb-8">Physical Characteristics</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div>
-<div class="text-4xl font-black text-primary-dark mb-1">4,800</div>
-<div class="text-xs uppercase tracking-widest font-bold text-on-surface-variant">kcal/kg Avg Value</div>
+<h4 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Texture
+                                    </h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Smooth, glossy exterior indicating high-pressure extrusion and low moisture intake during storage.</p>
 </div>
-</div>
-<div class="bg-primary-dark text-white p-8 flex flex-col justify-between rounded-lg">
-<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="eco">eco</span>
 <div>
-<div class="text-4xl font-black mb-1">100%</div>
-<div class="text-xs uppercase tracking-widest font-bold text-emerald-200">Sustainable Source</div>
+<h4 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Durability
+                                    </h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Mechanical durability ≥ 98%, designed for bulk transport and automated feeding systems without degradation.</p>
 </div>
 </div>
-<div class="col-span-2 relative h-64">
-<img alt="Pellet Detail" class="w-full h-full object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8p3XCVefwVzFN3JXmt5zn2kOSXLkXJVGP0n9EUumfNMlgbjFVy6i_DCe06Mffr8I62a7qGhL0rmL_ZyTUZonUITYVlFZbW-rKBmhOXXQrAVIVaeXeVPEqfYaI3N_TqMSKzftQs1uQMdkDhvd2hhdUJWnPm3oXF1tDgiRIIh-Iut8aCUBJPGVVJaPNBuNhZU3iNMO5wAbJ8IxRZ_UiwFW1Hcyu-894Kv6QSwuDx4GmGyBpHQuqRF9fJS26WB06Qqa8ZwjVI2Rt5GbI"/>
-</div>
-</div>
-</div>
-</section>
-<!-- Process Flow -->
-<section class="bg-zinc-50 py-24 border-y border-zinc-200">
-<div class="max-w-7xl mx-auto px-8">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-<div>
-<span class="text-primary font-bold text-sm uppercase tracking-widest mb-2 block">The Life Cycle</span>
-<h2 class="text-4xl font-extrabold text-primary-dark tracking-tighter">Production Process Flow</h2>
-</div>
-<div class="h-px flex-grow bg-zinc-200 mx-8 hidden md:block"></div>
-<p class="max-w-xs text-sm text-on-surface-variant italic">Refined manufacturing ensuring purity and density in every batch.</p>
-</div>
-<div class="relative">
-<div class="absolute top-1/2 left-0 w-full h-0.5 bg-zinc-200 hidden lg:block z-0"></div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 relative z-10">
-<div class="flex flex-col items-center text-center">
-<div class="w-16 h-16 bg-white border border-zinc-200 flex items-center justify-center mb-6 shadow-sm rounded-lg hover:border-primary transition-colors">
-<span class="material-symbols-outlined text-primary-dark" data-icon="forest">forest</span>
-</div>
-<h3 class="text-xs font-bold uppercase tracking-tighter mb-2 text-primary-dark">Raw Material</h3>
-<p class="text-[10px] leading-tight text-on-surface-variant">Sustainably harvested wood residuals</p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="w-16 h-16 bg-white border border-zinc-200 flex items-center justify-center mb-6 shadow-sm rounded-lg hover:border-primary transition-colors">
-<span class="material-symbols-outlined text-primary-dark" data-icon="carpenter">carpenter</span>
-</div>
-<h3 class="text-xs font-bold uppercase tracking-tighter mb-2 text-primary-dark">Debarking</h3>
-<p class="text-[10px] leading-tight text-on-surface-variant">Removal of bark for low ash content</p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="w-16 h-16 bg-white border border-zinc-200 flex items-center justify-center mb-6 shadow-sm rounded-lg hover:border-primary transition-colors">
-<span class="material-symbols-outlined text-primary-dark" data-icon="precision_manufacturing">precision_manufacturing</span>
-</div>
-<h3 class="text-xs font-bold uppercase tracking-tighter mb-2 text-primary-dark">Chipping</h3>
-<p class="text-[10px] leading-tight text-on-surface-variant">Mechanical processing into uniform chips</p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="w-16 h-16 bg-white border border-zinc-200 flex items-center justify-center mb-6 shadow-sm rounded-lg hover:border-primary transition-colors">
-<span class="material-symbols-outlined text-primary-dark" data-icon="thermostat">thermostat</span>
-</div>
-<h3 class="text-xs font-bold uppercase tracking-tighter mb-2 text-primary-dark">Drying</h3>
-<p class="text-[10px] leading-tight text-on-surface-variant">Moisture reduction to critical levels</p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="w-16 h-16 bg-primary flex items-center justify-center mb-6 shadow-xl rounded-lg scale-110">
-<span class="material-symbols-outlined text-white" data-icon="settings_input_component">settings_input_component</span>
-</div>
-<h3 class="text-xs font-bold uppercase tracking-tighter mb-2 text-primary">Pelletizing</h3>
-<p class="text-[10px] leading-tight text-on-surface-variant font-medium">Extrusion under high pressure</p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="w-16 h-16 bg-white border border-zinc-200 flex items-center justify-center mb-6 shadow-sm rounded-lg hover:border-primary transition-colors">
-<span class="material-symbols-outlined text-primary-dark" data-icon="ac_unit">ac_unit</span>
-</div>
-<h3 class="text-xs font-bold uppercase tracking-tighter mb-2 text-primary-dark">Cooling</h3>
-<p class="text-[10px] leading-tight text-on-surface-variant">Stabilizing structure and density</p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="w-16 h-16 bg-primary-dark flex items-center justify-center mb-6 shadow-sm rounded-lg">
-<span class="material-symbols-outlined text-white" data-icon="inventory_2">inventory_2</span>
-</div>
-<h3 class="text-xs font-bold uppercase tracking-tighter mb-2 text-primary-dark">Export</h3>
-<p class="text-[10px] leading-tight text-on-surface-variant">Global distribution and logistics</p>
+<div class="mt-12 pt-8 border-t border-outline-variant/20">
+<img alt="Pellet zoom detail" class="w-full h-48 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFY5wTz-zW2fE89JOf279G6tXy3m-nL9O9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w9G9w"/>
+<p class="text-[10px] text-zinc-400 mt-4 uppercase tracking-[0.2em] font-medium text-center">Macro Analysis — Premium Grade A1</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Final CTA -->
-<section class="max-w-7xl mx-auto px-8 mt-24">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-lg shadow-xl">
-<div class="p-16 bg-zinc-100">
-<h2 class="text-3xl font-extrabold text-primary-dark mb-6">Need a Custom Quote?</h2>
-<p class="text-on-surface-variant mb-8">We offer flexible bulk shipping options ranging from 15kg bags to large jumbo bags or loose bulk cargo.</p>
-<a class="inline-flex items-center text-primary font-bold gap-2 group transition-all" href="#">
-                        Contact Sales Department
-                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-</a>
+<!-- Comparison Section -->
+<section class="max-w-7xl mx-auto px-8 mb-24 py-24 bg-primary-dark rounded-lg text-white">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="text-4xl font-extrabold tracking-tighter mb-4">Industrial Grade Standards</h2>
+<p class="text-emerald-100/70">Our products exceed standard parameters for industrial and residential use, ensuring maximum heat output and minimum maintenance.</p>
 </div>
-<div class="p-16 bg-primary-dark text-white">
-<h2 class="text-3xl font-extrabold mb-6">Certification Standards</h2>
-<div class="flex flex-wrap gap-4 opacity-80">
-<div class="px-4 py-2 border border-white/20 text-xs font-bold uppercase tracking-widest rounded">ENplus A1</div>
-<div class="px-4 py-2 border border-white/20 text-xs font-bold uppercase tracking-widest rounded">FSC Certified</div>
-<div class="px-4 py-2 border border-white/20 text-xs font-bold uppercase tracking-widest rounded">ISO 17225-2</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 border border-white/10 rounded-lg bg-white/5 backdrop-blur-sm">
+<div class="text-primary font-black text-3xl mb-4">4800</div>
+<p class="text-xs uppercase tracking-widest font-bold mb-2">kcal/kg</p>
+<p class="text-sm text-white/60">High energy density specifically optimized for furnace efficiency and reduced fuel consumption.</p>
 </div>
+<div class="p-8 border border-white/10 rounded-lg bg-white/5 backdrop-blur-sm">
+<div class="text-primary font-black text-3xl mb-4">&lt; 0.5%</div>
+<p class="text-xs uppercase tracking-widest font-bold mb-2">Nitrogen Content</p>
+<p class="text-sm text-white/60">Low nitrogen and sulfur emissions, fully compliant with international environmental regulations.</p>
+</div>
+<div class="p-8 border border-white/10 rounded-lg bg-white/5 backdrop-blur-sm">
+<div class="text-primary font-black text-3xl mb-4">98%</div>
+<p class="text-xs uppercase tracking-widest font-bold mb-2">Durability</p>
+<p class="text-sm text-white/60">High mechanical integrity ensures minimal fine particles during shipping and pneumatic handling.</p>
 </div>
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="w-full border-t border-zinc-200 bg-zinc-100">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-12 py-16 max-w-7xl mx-auto font-['Manrope'] text-sm leading-relaxed">
-<div class="md:col-span-1">
+
+<footer class="w-full border-t border-zinc-200 bg-zinc-100 font-['Manrope'] text-sm leading-relaxed">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-12 py-16 max-w-7xl mx-auto">
+<div class="space-y-6">
 <img src="logo.png" alt="DOHWA RESOURCE DEVELOPMENT" class="h-10 w-auto object-contain" />
-<p class="text-zinc-500 mb-4">Pioneering sustainable resource development through precision and integrity.</p>
-</div>
-<div class="flex flex-col space-y-3">
-<div class="text-emerald-800 font-semibold mb-2 uppercase tracking-widest text-xs">Navigation</div>
-<a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="index.html#seen">Home</a>
-<a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="About us.html">About Us</a>
-<a class="text-emerald-700 font-semibold" href="Product.html">Products</a>
-<a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="Certification.html">Certifications</a>
-</div>
-<div class="flex flex-col space-y-3">
-<div class="text-emerald-800 font-semibold mb-2 uppercase tracking-widest text-xs">Legal</div>
-<a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Privacy Policy</a>
-<a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Terms of Service</a>
-<a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Environmental Impact</a>
+<p class="text-zinc-500">
+                Pioneering renewable energy through advanced biomass technology and ethical resource management.
+            </p>
 </div>
 <div>
-<div class="text-emerald-800 font-semibold mb-2 uppercase tracking-widest text-xs">Connect</div>
-<p class="text-zinc-500">Global HQ: Seoul, Korea</p>
-<p class="text-zinc-500">Supply: Southeast Asia Operations</p>
+<h5 class="text-emerald-800 font-bold mb-6">Navigation</h5>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="index.html#seen">Home</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="About us.html">About Us</a></li>
+<li><a class="text-emerald-700 font-semibold" href="Product.html">Products</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="Certification.html">Certifications</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-emerald-800 font-bold mb-6">Connect</h5>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Contact Us</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Linkedin</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Corporate News</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-emerald-800 font-bold mb-6">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Environmental Impact</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Sustainability Report</a></li>
+</ul>
 </div>
 </div>
-<div class="bg-zinc-200/50 py-6">
-<div class="max-w-7xl mx-auto px-12 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-widest text-zinc-500 font-bold">
-<div>© 2024 DOHWA RESOURCE DEVELOPMENT. All Rights Reserved.</div>
-<div class="flex gap-6 mt-4 md:mt-0 opacity-80 hover:opacity-100 transition-opacity">
-<span>Refining Excellence</span>
-<span>Powering The Future</span>
-</div>
-</div>
-</div>
+<div class="bg-zinc-200 py-8 text-center text-[10px] text-zinc-500 uppercase tracking-widest">
+        © 2024 DOHWA RESOURCE DEVELOPMENT. All Rights Reserved.
+    </div>
 </footer>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -368,12 +271,3 @@
     });
 </script>
 </body></html>
-
-
-
-
-
-
-
-
-
