@@ -464,7 +464,10 @@
 
         const startAll = () => {
             AOS.init({ duration: 900, once: true, offset: 60, easing: 'ease-out-quad' });
-            document.querySelectorAll('.counter').forEach(el => animateCounter(el));
+            // Start counter with same delay as the h1 AOS animation (100ms)
+            setTimeout(() => {
+                document.querySelectorAll('.counter').forEach(el => animateCounter(el));
+            }, 100);
         };
 
         const splash = document.getElementById('splash-screen');
