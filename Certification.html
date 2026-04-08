@@ -51,6 +51,36 @@
 <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
 </head>
 <body class="bg-surface text-on-surface">
+<script>
+    try {
+        const hasSeen = sessionStorage.getItem('splashShown') === 'true' || window.location.hash === '#seen';
+
+        if (!hasSeen) {
+            document.write('<div id="splash-screen" class="fixed inset-0 z-[100] flex items-center justify-center bg-white transition-opacity duration-1000"><img src="logo.png" alt="DOHWA Logo" class="h-24 md:h-32 w-auto object-contain drop-shadow-xl" style="animation: pulseLogo 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;" /></div>');
+            document.write('<style>@keyframes pulseLogo { 0% { opacity: 0; transform: scale(0.9) translateY(20px); filter: blur(10px); } 30% { opacity: 1; transform: scale(1.0) translateY(0); filter: blur(0); } 70% { opacity: 1; transform: scale(1.0) translateY(0); filter: blur(0); } 100% { opacity: 0; transform: scale(1.1); filter: blur(10px); } } .splash-hidden { opacity: 0; pointer-events: none; } .no-scroll { overflow: hidden; }</style>');
+            
+            document.body.classList.add('no-scroll');
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    const splash = document.getElementById('splash-screen');
+                    if(splash) {
+                        splash.classList.add('splash-hidden');
+                        setTimeout(function() {
+                            splash.style.display = 'none';
+                            document.body.classList.remove('no-scroll');
+                        }, 1000);
+                    } else {
+                         document.body.classList.remove('no-scroll');
+                    }
+                }, 2500);
+            });
+            try { sessionStorage.setItem('splashShown', 'true'); } catch(e) {}
+            if(window.history.replaceState) {
+                window.history.replaceState(null, null, window.location.pathname + '#seen');
+            }
+        }
+    } catch(e) {}
+</script>
 <!-- TopNavBar (Shared Component 15) -->
 <header class="bg-emerald-50/80 backdrop-blur-md fixed top-0 w-full z-50 shadow-sm">
 <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
@@ -80,11 +110,11 @@
 <section class="px-8 max-w-7xl mx-auto py-12 md:py-20">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 <div>
-<span class="text-emerald-700 font-label uppercase tracking-widest text-xs font-bold bg-emerald-100 px-3 py-1 mb-6 inline-block">Global Standards</span>
-<h1 class="text-5xl md:text-7xl font-extrabold text-[#014342] tracking-tighter leading-tight mb-6">
+<span class="text-emerald-700 font-label uppercase tracking-widest text-xs font-bold bg-emerald-100 px-3 py-1 mb-6 inline-block" data-aos="fade-down" data-aos-duration="800" data-aos-delay="0">Global Standards</span>
+<h1 class="text-5xl md:text-7xl font-extrabold text-[#014342] tracking-tighter leading-tight mb-6" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200">
                     Sustainability &amp; <br/>Technical Precision
                 </h1>
-<p class="text-on-surface-variant text-lg max-w-md leading-relaxed">
+<p class="text-on-surface-variant text-lg max-w-md leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                     Our commitment to international quality standards ensures that every shipment of wood pellets meets the most rigorous environmental and thermal efficiency criteria.
                 </p>
 </div>
@@ -296,6 +326,7 @@
     });
 </script>
 </body></html>
+
 
 
 
