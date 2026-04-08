@@ -511,15 +511,26 @@
             });
         }, { threshold: 0 }); // 0 threshold for instant trigger
 
-        document.querySelectorAll('.counter').forEach(el => {
-            // Check if element is already in viewport (hero section)
-            const rect = el.getBoundingClientRect();
-            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-                animateCounter(el);
-            } else {
-                counterObserver.observe(el);
-            }
-        });
+        document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+        // Start hero counters after splash screen or immediately
+        const startInitialCounters = () => {
+            document.querySelectorAll('.counter').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top >= 0 && rect.top <= window.innerHeight) {
+                    animateCounter(el);
+                    counterObserver.unobserve(el);
+                }
+            });
+        };
+
+        const splash = document.getElementById('splash-screen');
+        if (splash && getComputedStyle(splash).display !== 'none') {
+            // Wait for the exact moment splash is hidden (approx 3.5s total)
+            setTimeout(startInitialCounters, 3500);
+        } else {
+            startInitialCounters();
+        }
     });
 </script>
 </body></html>
