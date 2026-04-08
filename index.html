@@ -84,26 +84,6 @@
         .tonal-shift-bg {
             background: linear-gradient(to bottom, var(--tw-bg-opacity, 1) rgba(248, 250, 249, 1), rgba(242, 244, 243, 1));
         }
-        /* Hero CSS animations - GPU accelerated, no jank */
-        .hero-el { opacity: 0; transform: translateY(30px); will-change: transform, opacity; }
-        .hero-el-zoom { opacity: 0; transform: scale(0.9); will-change: transform, opacity; }
-        .hero-animate .hero-el {
-            animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-        .hero-animate .hero-el-zoom {
-            animation: heroZoom 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-        .hero-animate .hero-delay-1 { animation-delay: 0.15s; }
-        .hero-animate .hero-delay-2 { animation-delay: 0.3s; }
-        .hero-animate .hero-delay-3 { animation-delay: 0.45s; }
-        @keyframes heroFadeUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes heroZoom {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
     </style>
 <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
 </head>
@@ -171,16 +151,16 @@
 </div>
 <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
 <div class="max-w-2xl">
-<span class="hero-el inline-block px-4 py-1 bg-tertiary-container text-on-tertiary-container font-label text-xs font-bold uppercase tracking-[0.2em] mb-6 rounded-sm">
+<span class="inline-block px-4 py-1 bg-tertiary-container text-on-tertiary-container font-label text-xs font-bold uppercase tracking-[0.2em] mb-6 rounded-sm" data-aos="fade-down" data-aos-delay="0">
                         Vietnam's Leading Manufacturer
                     </span>
-<h1 class="hero-el-zoom hero-delay-1 font-headline text-6xl md:text-8xl font-extrabold text-white leading-none tracking-tighter mb-6">
-    <span class="text-primary counter" data-target="100000">0</span> tons/year capacity
+<h1 class="font-headline text-6xl md:text-8xl font-extrabold text-white leading-none tracking-tighter mb-6" data-aos="fade-up" data-aos-delay="100">
+    <span class="text-primary">100,000</span> tons/year capacity
 </h1>
-<p class="hero-el hero-delay-2 font-body text-xl text-primary-fixed leading-relaxed mb-10 max-w-lg" style="opacity:0">
+<p class="font-body text-xl text-primary-fixed leading-relaxed mb-10 max-w-lg" data-aos="fade-up" data-aos-delay="200">
     Leading Wood Pellet Manufacturer in Vietnam, driving global energy transitions with industrial scale and organic precision.
 </p>
-<div class="hero-el hero-delay-3 flex flex-wrap gap-4">
+<div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="300">
 <button class="px-8 py-4 bg-primary text-on-primary font-bold tracking-tight rounded-lg hover:brightness-110 transition-all uppercase text-sm">
     Explore Products
 </button>
@@ -468,59 +448,20 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // AOS only for below-fold content (not hero)
-        const fadeUpSelectors = [
-            'section:not(#hero-section) > div > div > h2', 
-            'section:not(#hero-section) > div > div > p', 
-            '.group', 
-            'section:not(#hero-section) img',
-            '.grid > div'
-        ];
-        document.querySelectorAll(fadeUpSelectors.join(', ')).forEach((el, index) => {
-            if(!el.hasAttribute('data-aos') && !el.closest('header') && !el.closest('#splash-screen') && !el.closest('#hero-section')) {
-                el.setAttribute('data-aos', 'fade-up');
-                el.setAttribute('data-aos-delay', (index % 4) * 100);
-            }
-        });
-
-
-
-        // Counter Animation (pure JS, no layout thrash)
-        const animateCounter = (counter) => {
-            const target = +counter.getAttribute('data-target');
-            const duration = 1200;
-            const startTime = performance.now();
-            const update = (t) => {
-                const p = Math.min((t - startTime) / duration, 1);
-                const e = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
-                counter.innerText = Math.ceil(target * e).toLocaleString();
-                if (p < 1) requestAnimationFrame(update);
-            };
-            requestAnimationFrame(update);
-        };
-
-        // Trigger hero animations (pure CSS, GPU accelerated)
-        const triggerHero = () => {
-            const hero = document.getElementById('hero-section');
-            if (hero) hero.classList.add('hero-animate');
-            document.querySelectorAll('.counter').forEach(el => animateCounter(el));
-            
-            // Delay AOS initialization to avoid CPU spike during transition
-            setTimeout(() => {
-                AOS.init({
-                    duration: 1000, 
-                    once: true, 
-                    offset: 50,
-                    easing: 'ease-out-cubic'
-                });
-            }, 1000); 
+        const initAOS = () => {
+            AOS.init({
+                duration: 900,
+                once: true,
+                offset: 60,
+                easing: 'ease-out-quad'
+            });
         };
 
         const splash = document.getElementById('splash-screen');
         if (splash && getComputedStyle(splash).display !== 'none') {
-            window.addEventListener('splashDone', triggerHero, { once: true });
+            window.addEventListener('splashDone', initAOS, { once: true });
         } else {
-            triggerHero();
+            initAOS();
         }
     });
 </script>
