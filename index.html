@@ -152,8 +152,8 @@
                         Vietnam's Leading Manufacturer
                     </span>
 <h1 class="font-headline text-6xl md:text-8xl font-extrabold text-white leading-none tracking-tighter mb-6" data-aos="zoom-out" data-aos-delay="200">
-                        100,000 tons/year capacity
-                    </h1>
+    <span class="text-primary counter" data-target="100000">0</span> tons/year capacity
+</h1>
 <p class="font-body text-xl text-primary-fixed leading-relaxed mb-10 opacity-90 max-w-lg" data-aos="fade-up" data-aos-delay="400">
                         Leading Wood Pellet Manufacturer in Vietnam, driving global energy transitions with industrial scale and organic precision.
                     </p>
@@ -473,6 +473,36 @@
             offset: 50,
             easing: 'ease-out-cubic'
         });
+
+        // Counter Animation
+        const animateCounter = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            let count = 0;
+            const duration = 2000; // 2 seconds
+            const increment = target / (duration / 16); // 60fps
+
+            const update = () => {
+                count += increment;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count).toLocaleString();
+                    requestAnimationFrame(update);
+                } else {
+                    counter.innerText = target.toLocaleString();
+                }
+            };
+            update();
+        };
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    setTimeout(() => animateCounter(entry.target), 600); // Wait for AOS zoom
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
     });
 </script>
 </body></html>
