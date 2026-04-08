@@ -88,42 +88,39 @@
 <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
 </head>
 <body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
-<!-- Splash Screen -->
-<div id="splash-screen" class="fixed inset-0 z-[100] flex items-center justify-center bg-white transition-opacity duration-1000">
-    <img src="logo.png" alt="DOHWA Logo" class="h-24 md:h-32 w-auto object-contain drop-shadow-xl" style="animation: pulseLogo 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;" />
-</div>
-<style>
-    @keyframes pulseLogo {
-        0% { opacity: 0; transform: scale(0.9) translateY(20px); filter: blur(10px); }
-        30% { opacity: 1; transform: scale(1.0) translateY(0); filter: blur(0); }
-        70% { opacity: 1; transform: scale(1.0) translateY(0); filter: blur(0); }
-        100% { opacity: 0; transform: scale(1.1); filter: blur(10px); }
-    }
-    .splash-hidden {
-        opacity: 0;
-        pointer-events: none;
-    }
-    /* Hide scrollbar during splash */
-    .no-scroll {
-        overflow: hidden;
-    }
-</style>
 <script>
-    document.body.classList.add('no-scroll');
-    window.addEventListener('load', function() {
-        setTimeout(function() {
-            const splash = document.getElementById('splash-screen');
-            if(splash) {
-                splash.classList.add('splash-hidden');
+    try {
+        const hasSeenSession = sessionStorage.getItem('splashShown') === 'true' || window.location.hash === '#seen';
+        const lastSeenLocal = localStorage.getItem('hasSeenSplash');
+        const hasSeenLocal = lastSeenLocal && (Date.now() - parseInt(lastSeenLocal)) < 3600000; // 1 hour
+        const hasSeen = hasSeenSession || hasSeenLocal;
+
+        if (!hasSeen) {
+            document.write('<div id="splash-screen" class="fixed inset-0 z-[100] flex items-center justify-center bg-white transition-opacity duration-1000"><img src="logo.png" alt="DOHWA Logo" class="h-24 md:h-32 w-auto object-contain drop-shadow-xl" style="animation: pulseLogo 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;" /></div>');
+            document.write('<style>@keyframes pulseLogo { 0% { opacity: 0; transform: scale(0.9) translateY(20px); filter: blur(10px); } 30% { opacity: 1; transform: scale(1.0) translateY(0); filter: blur(0); } 70% { opacity: 1; transform: scale(1.0) translateY(0); filter: blur(0); } 100% { opacity: 0; transform: scale(1.1); filter: blur(10px); } } .splash-hidden { opacity: 0; pointer-events: none; } .no-scroll { overflow: hidden; }</style>');
+            
+            document.body.classList.add('no-scroll');
+            window.addEventListener('load', function() {
                 setTimeout(function() {
-                    splash.style.display = 'none';
-                    document.body.classList.remove('no-scroll');
-                }, 1000);
-            } else {
-                 document.body.classList.remove('no-scroll');
+                    const splash = document.getElementById('splash-screen');
+                    if(splash) {
+                        splash.classList.add('splash-hidden');
+                        setTimeout(function() {
+                            splash.style.display = 'none';
+                            document.body.classList.remove('no-scroll');
+                        }, 1000);
+                    } else {
+                         document.body.classList.remove('no-scroll');
+                    }
+                }, 2500);
+            });
+            try { sessionStorage.setItem('splashShown', 'true'); } catch(e) {}
+            try { localStorage.setItem('hasSeenSplash', Date.now().toString()); } catch(e) {}
+            if(window.history.replaceState) {
+                window.history.replaceState(null, null, window.location.pathname + '#seen');
             }
-        }, 2500); // the fade out starts around here
-    });
+        }
+    } catch(e) {}
 </script>
 
 <!-- Top Navigation Shell -->
@@ -131,7 +128,7 @@
 <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
 <img src="logo.png" alt="DOHWA RESOURCE DEVELOPMENT" class="h-12 w-auto object-contain" />
 <nav class="hidden md:flex items-center space-x-8 font-['Manrope'] font-bold tracking-tight">
-<a class="text-emerald-700 border-b-2 border-emerald-700 pb-1" href="index.html">Home</a>
+<a class="text-emerald-700 border-b-2 border-emerald-700 pb-1" href="index.html#seen">Home</a>
 <a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="About us.html">About Us</a>
 <a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="Product.html">Products</a>
 <a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="Certification.html">Certifications</a>
@@ -330,7 +327,7 @@
 <div>
 <h5 class="text-emerald-800 font-bold mb-6 uppercase tracking-wider text-xs">Quick Links</h5>
 <ul class="space-y-4">
-<li><a class="text-emerald-700 font-semibold hover:text-emerald-600 transition-colors" href="index.html">Home</a></li>
+<li><a class="text-emerald-700 font-semibold hover:text-emerald-600 transition-colors" href="index.html#seen">Home</a></li>
 <li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="About us.html">About Us</a></li>
 <li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="Product.html">Products</a></li>
 <li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="Certification.html">Certifications</a></li>
@@ -402,6 +399,7 @@
     });
 </script>
 </body></html>
+
 
 
 
