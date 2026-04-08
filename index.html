@@ -478,7 +478,7 @@
         const animateCounter = (counter) => {
             const target = +counter.getAttribute('data-target');
             let count = 0;
-            const duration = 1000; // 1 second for faster speed
+            const duration = 800; // Even faster (0.8s)
             const startTime = performance.now();
 
             const update = (currentTime) => {
@@ -502,14 +502,24 @@
 
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
+                // If it's the hero counter (top of page), start immediately
+                // For others, wait until they are mostly visible
                 if(entry.isIntersecting) {
-                    animateCounter(entry.target); // Start immediately
+                    animateCounter(entry.target);
                     counterObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0 }); // 0 threshold for instant trigger
 
-        document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+        document.querySelectorAll('.counter').forEach(el => {
+            // Check if element is already in viewport (hero section)
+            const rect = el.getBoundingClientRect();
+            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                animateCounter(el);
+            } else {
+                counterObserver.observe(el);
+            }
+        });
     });
 </script>
 </body></html>
