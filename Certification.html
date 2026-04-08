@@ -48,6 +48,7 @@
         body { font-family: 'Manrope', sans-serif; }
         h1, h2, h3, h4, h5, .headline { font-family: 'Manrope', sans-serif; }
     </style>
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
 </head>
 <body class="bg-surface text-on-surface">
 <!-- TopNavBar (Shared Component 15) -->
@@ -260,4 +261,25 @@
 </div>
 </div>
 </footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // dynamically add data-aos
+        const selectors = [
+            'section > div > div > h2', 
+            'section p', 
+            '.group', 
+            'section img',
+            '.grid > div', 
+            'footer > div > div'
+        ];
+        document.querySelectorAll(selectors.join(', ')).forEach(el => {
+            if(!el.hasAttribute('data-aos') && !el.closest('header')) {
+                el.setAttribute('data-aos', 'fade-up');
+            }
+        });
+        AOS.init({duration: 800, once: true, offset: 50});
+    });
+</script>
 </body></html>
+
