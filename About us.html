@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#039248",
+                        "primary-dark": "#014342",
+                        "on-surface": "#191c1c",
+                        "surface": "#f8faf9",
+                        "surface-container": "#eceeed",
+                        "surface-container-low": "#f2f4f3",
+                        "surface-container-high": "#e6e9e8",
+                        "on-surface-variant": "#424844",
+                        "outline-variant": "#c1c8c3",
+                        "tertiary-container": "#014342",
+                        "on-tertiary-container": "#ffffff",
+                        "primary-container": "#039248",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30 selection:text-primary-dark">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-emerald-50/80 dark:bg-zinc-950/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-emerald-900 dark:text-emerald-50 font-headline">
+            DOHWA RESOURCE
+        </div>
+<div class="hidden md:flex items-center gap-8 font-['Manrope'] font-bold tracking-tight">
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors" href="index.html">Home</a>
+<a class="text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700 dark:border-emerald-400 pb-1" href="About us.html">About Us</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors" href="Product.html">Products</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors" href="Certification.html">Certifications</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors" href="Contact.html">Contact</a>
+</div>
+<div class="text-emerald-900 dark:text-emerald-50 font-headline tracking-tight font-bold text-sm">
+            EN / VI / JP
+        </div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[716px] flex items-center overflow-hidden bg-primary-dark">
+<div class="absolute inset-0 z-0">
+<img alt="Cinematic wide shot of a massive wood processing facility" class="w-full h-full object-cover opacity-40 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFZjGGZydi-ePq8CHVL1l5WTREnO6VXOVRaxe5Xs5e-Gkyilljan5DLHBPwey5uWcZg5UsZez9ujEru_3nf0UTr3jRJWmjWgGsrzlZDWZ5LSBVyIHoZEkzkJwRANenThcU-wVgUdjpxvCkzHhamjntt3fKt4WO_e_xuogssV1Hs44xbSiLAhlNePBiyLMwRRQK190a9cqZHvIdYWfweqj3TlPDCZ4Qa94y9uMAyypfDPs7XLQg3X_MtR1qIf1rmMlswCVIkF3BadEN"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary-dark/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<span class="inline-block px-3 py-1 bg-primary text-on-primary font-label text-xs tracking-widest uppercase mb-6 rounded-sm">Established 2012</span>
+<h1 class="font-headline text-6xl md:text-8xl font-extrabold text-white tracking-tighter max-w-4xl leading-[0.9]">
+            Forging the Future of <span class="text-primary">Sustainable</span> Energy.
+        </h1>
+<p class="mt-8 text-emerald-50 max-w-xl text-lg font-medium leading-relaxed opacity-90">
+            About Us — DOHWA RESOURCE DEVELOPMENT is a global leader in high-performance wood pellet production, bridging heavy industry and environmental stewardship.
+        </p>
+</div>
+</section>
+<!-- Factory Details & Key Stats -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-7 space-y-12">
+<div class="space-y-6">
+<h2 class="font-headline text-4xl font-bold tracking-tight text-primary-dark">Strategic Manufacturing Hub</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl">
+                        Our primary manufacturing facility represents the pinnacle of biomass technology. Strategically located to minimize transport carbon, our plant integrates automated processing with strict quality controls to ensure every pellet meets international premium standards.
+                    </p>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20 overflow-hidden rounded-lg">
+<div class="bg-surface-container-low p-8">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Production Area</span>
+<div class="text-4xl font-headline font-extrabold text-primary-dark">30,000 m²</div>
+<p class="text-sm text-on-surface-variant mt-2">Expansive integrated facility for processing and logistics.</p>
+</div>
+<div class="bg-surface-container-low p-8">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Technology</span>
+<div class="text-4xl font-headline font-extrabold text-primary-dark">State-of-the-art</div>
+<p class="text-sm text-on-surface-variant mt-2">Andritz heavy-duty machinery for precision compression.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 h-[500px] relative rounded-lg overflow-hidden group">
+<img alt="High-tech industrial manufacturing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmzdCsJCzUperzNyOcZwUXs181h76RajCP0L479r1I02NG9kVbxptbXCIDltRZkv1XUM9B_g6c0byBnQjq9A1cN-PmDC36nzM2dr1AaFptM2948jYz4HtezBIhcyV-Q17zvylSY0sob0yzGbvodGqttpI9OumBbWvMpe1veBPeu3TDoPTa8kJesSyNE-q1dsfBAunqtQnpVX6LZ89DeAjEfE67ubfkBdat9MeTfYPt7L_4j1vsDv3iNDt4rFFIsyIOODHs9zMHz1WU"/>
+<div class="absolute bottom-6 left-6 right-6 p-6 bg-white/90 backdrop-blur-md rounded-lg">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<div>
+<h4 class="font-headline font-bold text-primary-dark">Industrial Zone VI</h4>
+<p class="text-xs text-on-surface-variant mt-1">Binh Duong Province, Vietnam</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision & Mission Module -->
+<section class="relative py-32 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-primary-dark/95 mix-blend-multiply"></div>
+<img alt="Deep forest canopy" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxp3WADutddSjIA_TB4rzxrWGJuboQ-rVe6L6WYx8_GjULA6oDoy612rWF89toC55n1TuPUa5ZD3spU3lgumHbTkPb5pUxosuA1EI15VKMzyJEHw6L9XlIev-KccLnCRD3oPN833BkMT5EZezySK80urenmOvQ2NYSD_2odK_XbU6if10hFkWRzSRXfzouZr6pxfr0XorNMTlOoUD-19bz1_q_WXQGcnFHXE0uk7jWeb88QzPXySlaDzE9O3rOrKNEpUmIQaslJj89"/>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+<div class="space-y-8">
+<div class="w-12 h-1 bg-primary"></div>
+<h3 class="font-headline text-5xl font-extrabold text-white tracking-tighter">Our Vision</h3>
+<p class="text-emerald-50/90 text-xl leading-relaxed italic">
+                    "To redefine industrial energy as a circular, harmonious exchange with our planet's natural resources, becoming the global benchmark for carbon-neutral fuel."
+                </p>
+</div>
+<div class="space-y-8">
+<div class="w-12 h-1 bg-primary"></div>
+<h3 class="font-headline text-5xl font-extrabold text-white tracking-tighter">Our Mission</h3>
+<p class="text-emerald-50/90 text-xl leading-relaxed">
+                    Through relentless innovation in biomass engineering and transparent supply chain management, we provide global markets with consistent, ultra-efficient energy solutions that honor both economic and ecological demands.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline/History Section -->
+<section class="py-24 bg-zinc-50">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="font-headline text-4xl font-bold tracking-tight text-primary-dark">A Decade of Sustainable Growth</h2>
+<p class="text-on-surface-variant mt-4">Tracking our evolution from a regional supplier to a global resource partner.</p>
+</div>
+<div class="space-y-12">
+<!-- Timeline Item -->
+<div class="flex flex-col md:flex-row gap-8 items-start relative pb-12 last:pb-0 border-l-2 border-outline-variant ml-4 md:ml-0 md:border-l-0">
+<div class="md:w-32 flex-shrink-0">
+<span class="font-headline text-2xl font-black text-primary block">2012</span>
+<div class="hidden md:block w-full h-px bg-outline-variant mt-4"></div>
+</div>
+<div class="bg-white p-8 rounded-lg flex-grow shadow-sm hover:shadow-md transition-shadow border border-zinc-100">
+<h4 class="font-headline font-bold text-xl mb-3 text-primary-dark">Foundation</h4>
+<p class="text-on-surface-variant leading-relaxed">Establishment of DOHWA Resource in South Korea, focusing on R&amp;D for high-caloric wood pellet variants and securing sustainable forestry partnerships.</p>
+</div>
+</div>
+<!-- Timeline Item -->
+<div class="flex flex-col md:flex-row gap-8 items-start relative pb-12 last:pb-0 border-l-2 border-outline-variant ml-4 md:ml-0 md:border-l-0">
+<div class="md:w-32 flex-shrink-0">
+<span class="font-headline text-2xl font-black text-primary block">2016</span>
+<div class="hidden md:block w-full h-px bg-outline-variant mt-4"></div>
+</div>
+<div class="bg-white p-8 rounded-lg flex-grow shadow-sm hover:shadow-md transition-shadow border border-zinc-100">
+<h4 class="font-headline font-bold text-xl mb-3 text-primary-dark">Global Expansion</h4>
+<p class="text-on-surface-variant leading-relaxed">Commissioning of the first automated facility in Southeast Asia, reaching an annual capacity of 100,000 metric tons and obtaining FSC certification.</p>
+</div>
+</div>
+<!-- Timeline Item -->
+<div class="flex flex-col md:flex-row gap-8 items-start relative pb-12 last:pb-0 border-l-2 border-outline-variant ml-4 md:ml-0 md:border-l-0">
+<div class="md:w-32 flex-shrink-0">
+<span class="font-headline text-2xl font-black text-primary block">2021</span>
+<div class="hidden md:block w-full h-px bg-outline-variant mt-4"></div>
+</div>
+<div class="bg-white p-8 rounded-lg flex-grow shadow-sm hover:shadow-md transition-shadow border border-zinc-100">
+<h4 class="font-headline font-bold text-xl mb-3 text-primary-dark">Innovation Leap</h4>
+<p class="text-on-surface-variant leading-relaxed">Introduction of the G3 Premium series. Full digitalization of the production line, achieving a 99.8% consistency rate in ash content management.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SideNavBar -->
+<aside class="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex flex-col bg-emerald-900 dark:bg-emerald-950 rounded-l-md shadow-[0_20px_40px_rgba(1,67,66,0.1)] hover:translate-x-[-4px] transition-transform cursor-pointer">
+<a class="bg-emerald-800 text-emerald-100 p-4 flex flex-col items-center gap-2 group active:brightness-90" href="#">
+<span class="material-symbols-outlined text-white" data-icon="payments">payments</span>
+<span class="font-['Manrope'] font-bold uppercase tracking-widest text-[10px] text-white text-center">Request<br/>Quote</span>
+</a>
+</aside>
+<!-- Footer -->
+<footer class="w-full border-t border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 font-['Manrope'] text-sm leading-relaxed">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-12 py-16 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-lg font-bold text-emerald-900 dark:text-emerald-50">DOHWA RESOURCE</div>
+<p class="text-zinc-500 dark:text-zinc-400">
+                Pioneering renewable energy through advanced biomass technology and ethical resource management.
+            </p>
+</div>
+<div>
+<h5 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6">Navigation</h5>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="index.html">Home</a></li>
+<li><a class="text-emerald-700 dark:text-emerald-300 font-semibold" href="About us.html">About Us</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="Product.html">Products</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="Certification.html">Certifications</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6">Connect</h5>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#">Contact Us</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#">Linkedin</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#">Corporate News</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#">Environmental Impact</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#">Sustainability Report</a></li>
+</ul>
+</div>
+</div>
+<div class="bg-zinc-200 dark:bg-zinc-800 py-8 text-center">
+<p class="text-xs text-zinc-500 dark:text-zinc-400 px-8">
+            © 2024 DOHWA RESOURCE DEVELOPMENT. All Rights Reserved.
+        </p>
+</div>
+</footer>
+</body></html>
