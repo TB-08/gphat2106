@@ -57,6 +57,36 @@
 <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
 </head>
 <body class="bg-surface font-body text-on-surface">
+<script>
+    try {
+        const hasSeen = sessionStorage.getItem('splashShown') === 'true' || window.location.hash === '#seen';
+
+        if (!hasSeen) {
+            document.write('<div id="splash-screen" class="fixed inset-0 z-[100] flex items-center justify-center bg-white transition-opacity duration-1000"><img src="logo.png" alt="DOHWA Logo" class="h-24 md:h-32 w-auto object-contain drop-shadow-xl" style="animation: pulseLogo 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;" /></div>');
+            document.write('<style>@keyframes pulseLogo { 0% { opacity: 0; transform: scale(0.9) translateY(20px); filter: blur(10px); } 30% { opacity: 1; transform: scale(1.0) translateY(0); filter: blur(0); } 70% { opacity: 1; transform: scale(1.0) translateY(0); filter: blur(0); } 100% { opacity: 0; transform: scale(1.1); filter: blur(10px); } } .splash-hidden { opacity: 0; pointer-events: none; } .no-scroll { overflow: hidden; }</style>');
+            
+            document.body.classList.add('no-scroll');
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    const splash = document.getElementById('splash-screen');
+                    if(splash) {
+                        splash.classList.add('splash-hidden');
+                        setTimeout(function() {
+                            splash.style.display = 'none';
+                            document.body.classList.remove('no-scroll');
+                        }, 1000);
+                    } else {
+                         document.body.classList.remove('no-scroll');
+                    }
+                }, 2500);
+            });
+            try { sessionStorage.setItem('splashShown', 'true'); } catch(e) {}
+            if(window.history.replaceState) {
+                window.history.replaceState(null, null, window.location.pathname + '#seen');
+            }
+        }
+    } catch(e) {}
+</script>
 <!-- TopNavBar Component -->
 <nav class="fixed top-0 w-full z-50 bg-emerald-50/80 dark:bg-zinc-950/80 backdrop-blur-md shadow-sm dark:shadow-none border-b border-zinc-100/50 dark:border-zinc-800/50">
 <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
@@ -85,9 +115,9 @@
 <!-- Left Section: Inquiry Form -->
 <section class="w-full md:w-1/2 p-8 md:p-16 lg:p-24 bg-surface-container-low">
 <div class="max-w-xl mx-auto">
-<span class="text-primary font-label text-xs font-bold uppercase tracking-[0.2em] mb-4 block">Direct Partnership</span>
-<h1 class="text-4xl md:text-5xl font-headline font-black text-primary-dark tracking-tight mb-8">B2B Inquiry</h1>
-<p class="text-on-surface-variant mb-12 leading-relaxed">Connect with our distribution team for global wood pellet supply. Provide your company details below for a customized technical specification and volume pricing.</p>
+<span class="text-primary font-label text-xs font-bold uppercase tracking-[0.2em] mb-4 block" data-aos="fade-down" data-aos-duration="800" data-aos-delay="0">Direct Partnership</span>
+<h1 class="text-4xl md:text-5xl font-headline font-black text-primary-dark tracking-tight mb-8" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200">B2B Inquiry</h1>
+<p class="text-on-surface-variant mb-12 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Connect with our distribution team for global wood pellet supply. Provide your company details below for a customized technical specification and volume pricing.</p>
 <form class="space-y-6">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
@@ -240,6 +270,7 @@
     });
 </script>
 </body></html>
+
 
 
 
