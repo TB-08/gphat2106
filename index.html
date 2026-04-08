@@ -89,23 +89,29 @@
 </head>
 <body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
 <!-- Splash Screen -->
-<div id="splash-screen" class="fixed inset-0 z-[100] flex items-center justify-center bg-surface transition-opacity duration-1000">
-    <div class="text-4xl md:text-6xl font-extrabold tracking-tighter text-emerald-900 font-headline uppercase" style="animation: pulseLogo 2s ease-in-out forwards;">
+<div id="splash-screen" class="fixed inset-0 z-[100] flex items-center justify-center bg-primary-dark transition-opacity duration-1000">
+    <div class="text-4xl md:text-7xl font-black tracking-widest text-tertiary-fixed-dim font-headline uppercase" style="animation: pulseLogo 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;">
         DOHWA RESOURCE
     </div>
 </div>
 <style>
     @keyframes pulseLogo {
-        0% { opacity: 0; transform: scale(0.9); }
-        50% { opacity: 1; transform: scale(1.05); }
-        100% { opacity: 1; transform: scale(1); }
+        0% { opacity: 0; transform: scale(0.9) translateY(20px); filter: blur(10px); }
+        30% { opacity: 1; transform: scale(1.0) translateY(0); filter: blur(0); }
+        70% { opacity: 1; transform: scale(1.0) translateY(0); filter: blur(0); }
+        100% { opacity: 0; transform: scale(1.1); filter: blur(10px); }
     }
     .splash-hidden {
         opacity: 0;
         pointer-events: none;
     }
+    /* Hide scrollbar during splash */
+    .no-scroll {
+        overflow: hidden;
+    }
 </style>
 <script>
+    document.body.classList.add('no-scroll');
     window.addEventListener('load', function() {
         setTimeout(function() {
             const splash = document.getElementById('splash-screen');
@@ -113,11 +119,15 @@
                 splash.classList.add('splash-hidden');
                 setTimeout(function() {
                     splash.style.display = 'none';
+                    document.body.classList.remove('no-scroll');
                 }, 1000);
+            } else {
+                 document.body.classList.remove('no-scroll');
             }
-        }, 1500);
+        }, 2500); // the fade out starts around here
     });
 </script>
+
 <!-- Top Navigation Shell -->
 <header class="bg-emerald-50/80 backdrop-blur-md fixed top-0 w-full z-50 shadow-sm">
 <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
@@ -355,25 +365,42 @@
 </div>
 </div>
 </footer>
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // dynamically add data-aos
-        const selectors = [
+        const fadeUpSelectors = [
             'section > div > div > h2', 
-            'section p', 
+            'section > div > div > p', 
             '.group', 
             'section img',
-            '.grid > div', 
-            'footer > div > div'
+            '.grid > div'
         ];
-        document.querySelectorAll(selectors.join(', ')).forEach(el => {
-            if(!el.hasAttribute('data-aos') && !el.closest('header')) {
+        document.querySelectorAll(fadeUpSelectors.join(', ')).forEach((el, index) => {
+            if(!el.hasAttribute('data-aos') && !el.closest('header') && !el.closest('#splash-screen')) {
                 el.setAttribute('data-aos', 'fade-up');
+                el.setAttribute('data-aos-delay', (index % 4) * 100);
             }
         });
-        AOS.init({duration: 800, once: true, offset: 50});
+        
+        // Add zoom-in to some large elements
+        document.querySelectorAll('h1').forEach(el => {
+            if(!el.hasAttribute('data-aos') && !el.closest('#splash-screen')) {
+                el.setAttribute('data-aos', 'zoom-out');
+                el.setAttribute('data-aos-duration', '1200');
+            }
+        });
+
+        AOS.init({
+            duration: 1000, 
+            once: true, 
+            offset: 50,
+            easing: 'ease-out-cubic'
+        });
     });
 </script>
 </body></html>
+
+
+
 
