@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
@@ -88,15 +88,19 @@
 <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
 <img src="logo.png" alt="DOHWA RESOURCE DEVELOPMENT" class="h-12 w-auto object-contain" />
 <div class="hidden md:flex items-center gap-8 font-['Manrope'] font-bold tracking-tight">
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors" href="index.html#seen">Home</a>
-<a class="text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700 dark:border-emerald-400 pb-1" href="About us.html">About Us</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors" href="Product.html">Products</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors" href="Certification.html">Certifications</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors" href="Contact.html">Contact</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors" href="index.html#seen" data-i18n="nav_home">Home</a>
+<a class="text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700 dark:border-emerald-400 pb-1" href="About us.html" data-i18n="nav_about">About Us</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors" href="Product.html" data-i18n="nav_products">Products</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors" href="Certification.html" data-i18n="nav_certifications">Certifications</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors" href="Contact.html" data-i18n="nav_contact">Contact</a>
 </div>
-<div class="text-emerald-900 dark:text-emerald-50 font-headline tracking-tight font-bold text-sm">
-            EN / VI / JP
-        </div>
+<span class="text-xs font-bold tracking-widest font-['Manrope'] flex items-center gap-1">
+  <button class="lang-btn text-emerald-700 font-black underline" data-lang="en" onclick="setLang('en')">EN</button>
+  <span class="text-emerald-700/40">/</span>
+  <button class="lang-btn text-emerald-900/50 font-bold" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <span class="text-emerald-700/40">/</span>
+  <button class="lang-btn text-emerald-900/50 font-bold" data-lang="jp" onclick="setLang('jp')">JP</button>
+</span>
 </div>
 </nav>
 <!-- Hero Section -->
@@ -108,10 +112,10 @@
 <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
 <span class="inline-block px-3 py-1 bg-primary text-on-primary font-label text-xs tracking-widest uppercase mb-6 rounded-sm" data-aos="fade-down" data-aos-duration="800" data-aos-delay="0">Established 2012</span>
 <h1 class="font-headline text-6xl md:text-8xl font-extrabold text-white tracking-tighter max-w-4xl leading-[0.9]" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200">
-            Forging the Future of <span class="text-primary">Sustainable</span> Energy.
+            Forging the Future of <span class="text-primary" data-i18n="about_h1_span">Sustainable</span><span data-i18n="about_h1_end"> Energy.</span>
         </h1>
 <p class="mt-8 text-emerald-50 max-w-xl text-lg font-medium leading-relaxed opacity-90" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-            About Us — DOHWA RESOURCE DEVELOPMENT is a global leader in high-performance wood pellet production, bridging heavy industry and environmental stewardship.
+            <span data-i18n="about_h1_p">About Us — DOHWA RESOURCE DEVELOPMENT is a global leader in high-performance wood pellet production, bridging heavy industry and environmental stewardship.</span>
         </p>
 </div>
 </section>
@@ -121,7 +125,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
 <div class="lg:col-span-7 space-y-12">
 <div class="space-y-6">
-<h2 class="font-headline text-4xl font-bold tracking-tight text-primary-dark">Strategic Manufacturing Hub</h2>
+<h2 class="font-headline text-4xl font-bold tracking-tight text-primary-dark" data-i18n="about_hub_h2">Strategic Manufacturing Hub</h2>
 <p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl">
                         Our primary manufacturing facility represents the pinnacle of biomass technology. Strategically located to minimize transport carbon, our plant integrates automated processing with strict quality controls to ensure every pellet meets international premium standards.
                     </p>
@@ -129,14 +133,14 @@
 <!-- Stats Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20 overflow-hidden rounded-lg">
 <div class="bg-surface-container-low p-8">
-<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Production Area</span>
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 block" data-i18n="about_prod_area_label">Production Area</span>
 <div class="text-4xl font-headline font-extrabold text-primary-dark">30,000 m²</div>
-<p class="text-sm text-on-surface-variant mt-2">Expansive integrated facility for processing and logistics.</p>
+<p class="text-sm text-on-surface-variant mt-2" data-i18n="about_prod_area_p">Expansive integrated facility for processing and logistics.</p>
 </div>
 <div class="bg-surface-container-low p-8">
-<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 block">Technology</span>
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 block" data-i18n="about_tech_label">Technology</span>
 <div class="text-4xl font-headline font-extrabold text-primary-dark">State-of-the-art</div>
-<p class="text-sm text-on-surface-variant mt-2">Andritz heavy-duty machinery for precision compression.</p>
+<p class="text-sm text-on-surface-variant mt-2" data-i18n="about_tech_p">Andritz heavy-duty machinery for precision compression.</p>
 </div>
 </div>
 </div>
@@ -165,14 +169,14 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
 <div class="space-y-8">
 <div class="w-12 h-1 bg-primary"></div>
-<h3 class="font-headline text-5xl font-extrabold text-white tracking-tighter">Our Vision</h3>
+<h3 class="font-headline text-5xl font-extrabold text-white tracking-tighter" data-i18n="about_vision_h3">Our Vision</h3>
 <p class="text-emerald-50/90 text-xl leading-relaxed italic">
                     "To redefine industrial energy as a circular, harmonious exchange with our planet's natural resources, becoming the global benchmark for carbon-neutral fuel."
                 </p>
 </div>
 <div class="space-y-8">
 <div class="w-12 h-1 bg-primary"></div>
-<h3 class="font-headline text-5xl font-extrabold text-white tracking-tighter">Our Mission</h3>
+<h3 class="font-headline text-5xl font-extrabold text-white tracking-tighter" data-i18n="about_mission_h3">Our Mission</h3>
 <p class="text-emerald-50/90 text-xl leading-relaxed">
                     Through relentless innovation in biomass engineering and transparent supply chain management, we provide global markets with consistent, ultra-efficient energy solutions that honor both economic and ecological demands.
                 </p>
@@ -184,7 +188,7 @@
 <section class="py-24 bg-zinc-50">
 <div class="max-w-7xl mx-auto px-8">
 <div class="mb-16">
-<h2 class="font-headline text-4xl font-bold tracking-tight text-primary-dark">A Decade of Sustainable Growth</h2>
+<h2 class="font-headline text-4xl font-bold tracking-tight text-primary-dark" data-i18n="about_decade_h2">A Decade of Sustainable Growth</h2>
 <p class="text-on-surface-variant mt-4">Tracking our evolution from a regional supplier to a global resource partner.</p>
 </div>
 <div class="space-y-12">
@@ -195,7 +199,7 @@
 <div class="hidden md:block w-full h-px bg-outline-variant mt-4"></div>
 </div>
 <div class="bg-white p-8 rounded-lg flex-grow shadow-sm hover:shadow-md transition-shadow border border-zinc-100">
-<h4 class="font-headline font-bold text-xl mb-3 text-primary-dark">Foundation</h4>
+<h4 class="font-headline font-bold text-xl mb-3 text-primary-dark" data-i18n="about_2012_h4">Foundation</h4>
 <p class="text-on-surface-variant leading-relaxed">Establishment of DOHWA Resource in South Korea, focusing on R&amp;D for high-caloric wood pellet variants and securing sustainable forestry partnerships.</p>
 </div>
 </div>
@@ -206,7 +210,7 @@
 <div class="hidden md:block w-full h-px bg-outline-variant mt-4"></div>
 </div>
 <div class="bg-white p-8 rounded-lg flex-grow shadow-sm hover:shadow-md transition-shadow border border-zinc-100">
-<h4 class="font-headline font-bold text-xl mb-3 text-primary-dark">Global Expansion</h4>
+<h4 class="font-headline font-bold text-xl mb-3 text-primary-dark" data-i18n="about_2016_h4">Global Expansion</h4>
 <p class="text-on-surface-variant leading-relaxed">Commissioning of the first automated facility in Southeast Asia, reaching an annual capacity of 100,000 metric tons and obtaining FSC certification.</p>
 </div>
 </div>
@@ -217,7 +221,7 @@
 <div class="hidden md:block w-full h-px bg-outline-variant mt-4"></div>
 </div>
 <div class="bg-white p-8 rounded-lg flex-grow shadow-sm hover:shadow-md transition-shadow border border-zinc-100">
-<h4 class="font-headline font-bold text-xl mb-3 text-primary-dark">Innovation Leap</h4>
+<h4 class="font-headline font-bold text-xl mb-3 text-primary-dark" data-i18n="about_2021_h4">Innovation Leap</h4>
 <p class="text-on-surface-variant leading-relaxed">Introduction of the G3 Premium series. Full digitalization of the production line, achieving a 99.8% consistency rate in ash content management.</p>
 </div>
 </div>
@@ -234,16 +238,16 @@
             </p>
 </div>
 <div>
-<h5 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6">Navigation</h5>
+<h5 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6" data-i18n="footer_navigation">Navigation</h5>
 <ul class="space-y-4">
-<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="index.html#seen">Home</a></li>
-<li><a class="text-emerald-700 dark:text-emerald-300 font-semibold" href="About us.html">About Us</a></li>
-<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="Product.html">Products</a></li>
-<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="Certification.html">Certifications</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="index.html#seen" data-i18n="nav_home">Home</a></li>
+<li><a class="text-emerald-700 dark:text-emerald-300 font-semibold" href="About us.html" data-i18n="nav_about">About Us</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="Product.html" data-i18n="nav_products">Products</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="Certification.html" data-i18n="nav_certifications">Certifications</a></li>
 </ul>
 </div>
 <div>
-<h5 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6">Connect</h5>
+<h5 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6" data-i18n="footer_connect">Connect</h5>
 <ul class="space-y-4">
 <li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#">Contact Us</a></li>
 <li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#">Linkedin</a></li>
@@ -251,7 +255,7 @@
 </ul>
 </div>
 <div>
-<h5 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6">Legal</h5>
+<h5 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6" data-i18n="footer_legal">Legal</h5>
 <ul class="space-y-4">
 <li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#">Privacy Policy</a></li>
 <li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors" href="#">Terms of Service</a></li>
@@ -262,12 +266,13 @@
 </div>
 <div class="bg-zinc-200 dark:bg-zinc-800 py-8 text-center">
 <p class="text-xs text-zinc-500 dark:text-zinc-400 px-8">
-            © 2024 DOHWA RESOURCE DEVELOPMENT. All Rights Reserved.
+            <span data-i18n="footer_copyright">© 2024 DOHWA RESOURCE DEVELOPMENT. All Rights Reserved.</span>
         </p>
 </div>
 </footer>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="i18n.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const fadeUpSelectors = [
@@ -301,3 +306,5 @@
     });
 </script>
 </body></html>
+
+

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en"><head>
 <meta charset="utf-8"/>
@@ -92,14 +92,20 @@
 <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
 <img src="logo.png" alt="DOHWA RESOURCE DEVELOPMENT" class="h-12 w-auto object-contain" />
 <div class="hidden md:flex items-center space-x-8">
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors font-headline font-bold tracking-tight" href="index.html#seen">Home</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors font-headline font-bold tracking-tight" href="About us.html">About Us</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors font-headline font-bold tracking-tight" href="Product.html">Products</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors font-headline font-bold tracking-tight" href="Certification.html">Certifications</a>
-<a class="text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700 dark:border-emerald-400 pb-1 font-headline font-bold tracking-tight" href="Contact.html">Contact</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors font-headline font-bold tracking-tight" href="index.html#seen" data-i18n="nav_home">Home</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors font-headline font-bold tracking-tight" href="About us.html" data-i18n="nav_about">About Us</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors font-headline font-bold tracking-tight" href="Product.html" data-i18n="nav_products">Products</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors font-headline font-bold tracking-tight" href="Certification.html" data-i18n="nav_certifications">Certifications</a>
+<a class="text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700 dark:border-emerald-400 pb-1 font-headline font-bold tracking-tight" href="Contact.html" data-i18n="nav_contact">Contact</a>
 </div>
 <div class="flex items-center gap-4">
-<div class="text-emerald-900 dark:text-emerald-50 font-headline tracking-tight font-bold uppercase text-xs">EN / VI / JP</div>
+<span class="text-xs font-bold tracking-widest font-['Manrope'] flex items-center gap-1">
+  <button class="lang-btn text-emerald-700 font-black underline" data-lang="en" onclick="setLang('en')">EN</button>
+  <span class="text-emerald-700/40">/</span>
+  <button class="lang-btn text-emerald-900/50 font-bold" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <span class="text-emerald-700/40">/</span>
+  <button class="lang-btn text-emerald-900/50 font-bold" data-lang="jp" onclick="setLang('jp')">JP</button>
+</span>
 </div>
 </div>
 </nav>
@@ -107,7 +113,7 @@
 <div class="fixed right-0 top-1/2 -translate-y-1/2 rounded-l-md z-40 flex flex-col bg-emerald-900 dark:bg-emerald-950 shadow-[0_20px_40px_rgba(1,67,66,0.1)] hover:translate-x-[-4px] transition-transform cursor-pointer group">
 <div class="bg-emerald-800 text-white p-4 flex flex-col items-center gap-2 group-hover:bg-emerald-700 transition-colors">
 <span class="material-symbols-outlined text-white" data-icon="payments">payments</span>
-<span class="font-headline font-bold uppercase tracking-widest text-[10px] text-white text-center vertical-text">Get a Quote</span>
+<span class="font-headline font-bold uppercase tracking-widest text-[10px] text-white text-center vertical-text" data-i18n="nav_get_quote">Get a Quote</span>
 </div>
 </div>
 <main class="pt-16 min-h-screen">
@@ -115,33 +121,33 @@
 <!-- Left Section: Inquiry Form -->
 <section class="w-full md:w-1/2 p-8 md:p-16 lg:p-24 bg-surface-container-low">
 <div class="max-w-xl mx-auto">
-<span class="text-primary font-label text-xs font-bold uppercase tracking-[0.2em] mb-4 block" data-aos="fade-down" data-aos-duration="800" data-aos-delay="0">Direct Partnership</span>
-<h1 class="text-4xl md:text-5xl font-headline font-black text-primary-dark tracking-tight mb-8" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200">B2B Inquiry</h1>
+<span class="text-primary font-label text-xs font-bold uppercase tracking-[0.2em] mb-4 block" data-aos="fade-down" data-aos-duration="800" data-aos-delay="0" data-i18n="contact_badge">Direct Partnership</span>
+<h1 class="text-4xl md:text-5xl font-headline font-black text-primary-dark tracking-tight mb-8" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200" data-i18n="contact_h1">B2B Inquiry</h1>
 <p class="text-on-surface-variant mb-12 leading-relaxed" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Connect with our distribution team for global wood pellet supply. Provide your company details below for a customized technical specification and volume pricing.</p>
 <form class="space-y-6">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
-<label class="text-xs font-bold font-label uppercase text-on-surface-variant tracking-wider">Full Name</label>
+<label class="text-xs font-bold font-label uppercase text-on-surface-variant tracking-wider" data-i18n="contact_fullname">Full Name</label>
 <input class="w-full bg-white border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary/20 rounded px-4 py-3 text-on-surface placeholder:text-outline/50 transition-all" placeholder="John Doe" type="text"/>
 </div>
 <div class="space-y-2">
-<label class="text-xs font-bold font-label uppercase text-on-surface-variant tracking-wider">Company Name</label>
+<label class="text-xs font-bold font-label uppercase text-on-surface-variant tracking-wider" data-i18n="contact_company">Company Name</label>
 <input class="w-full bg-white border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary/20 rounded px-4 py-3 text-on-surface placeholder:text-outline/50 transition-all" placeholder="Industrial Corp" type="text"/>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
-<label class="text-xs font-bold font-label uppercase text-on-surface-variant tracking-wider">Business Email</label>
+<label class="text-xs font-bold font-label uppercase text-on-surface-variant tracking-wider" data-i18n="contact_email">Business Email</label>
 <input class="w-full bg-white border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary/20 rounded px-4 py-3 text-on-surface placeholder:text-outline/50 transition-all" placeholder="contact@company.com" type="email"/>
 </div>
 <div class="space-y-2">
-<label class="text-xs font-bold font-label uppercase text-on-surface-variant tracking-wider">Phone Number</label>
+<label class="text-xs font-bold font-label uppercase text-on-surface-variant tracking-wider" data-i18n="contact_phone">Phone Number</label>
 <input class="w-full bg-white border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary/20 rounded px-4 py-3 text-on-surface placeholder:text-outline/50 transition-all" placeholder="+84 ..." type="tel"/>
 </div>
 </div>
 <div class="space-y-2">
-<label class="text-xs font-bold font-label uppercase text-on-surface-variant tracking-wider">Message / Specific Requirements</label>
-<textarea class="w-full bg-white border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary/20 rounded px-4 py-3 text-on-surface placeholder:text-outline/50 transition-all" placeholder="Volume requirements, destination port, etc." rows="4"></textarea>
+<label class="text-xs font-bold font-label uppercase text-on-surface-variant tracking-wider" data-i18n="contact_message">Message / Specific Requirements</label>
+<textarea class="w-full bg-white border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary/20 rounded px-4 py-3 text-on-surface placeholder:text-outline/50 transition-all" placeholder="Volume requirements, destination port, etc." data-i18n-placeholder="contact_msg_ph" rows="4"></textarea>
 </div>
 <button class="bg-primary-dark text-white w-full md:w-auto px-12 py-4 font-headline font-bold text-sm tracking-widest uppercase hover:bg-primary transition-all shadow-lg flex items-center justify-center gap-3 rounded" type="submit">
                             Submit Inquiry
@@ -158,26 +164,26 @@
 </div>
 <div class="relative z-20 flex-grow flex flex-col p-8 md:p-16 lg:p-24 justify-end">
 <div class="bg-white/10 backdrop-blur-md p-8 border border-white/20 rounded-lg shadow-2xl">
-<h2 class="text-white font-headline font-black text-3xl mb-8 tracking-tight">Factory Headquarters</h2>
+<h2 class="text-white font-headline font-black text-3xl mb-8 tracking-tight" data-i18n="contact_hq_h2">Factory Headquarters</h2>
 <div class="grid grid-cols-1 gap-8">
 <div class="flex gap-4">
 <span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
 <div>
-<h4 class="text-xs font-bold font-label uppercase text-emerald-200 tracking-widest mb-1">Global Operations</h4>
+<h4 class="text-xs font-bold font-label uppercase text-emerald-200 tracking-widest mb-1" data-i18n="contact_global_h4">Global Operations</h4>
 <p class="text-white font-body leading-relaxed">Near Hon La Seaport, Quang Trach District,<br/>Quang Binh Province, Vietnam</p>
 </div>
 </div>
 <div class="flex gap-4">
 <span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
 <div>
-<h4 class="text-xs font-bold font-label uppercase text-emerald-200 tracking-widest mb-1">Electronic Mail</h4>
+<h4 class="text-xs font-bold font-label uppercase text-emerald-200 tracking-widest mb-1" data-i18n="contact_email_h4">Electronic Mail</h4>
 <p class="text-white font-body">export@dohwaresource.com</p>
 </div>
 </div>
 <div class="flex gap-4">
 <span class="material-symbols-outlined text-primary" data-icon="call">call</span>
 <div>
-<h4 class="text-xs font-bold font-label uppercase text-emerald-200 tracking-widest mb-1">Support Line</h4>
+<h4 class="text-xs font-bold font-label uppercase text-emerald-200 tracking-widest mb-1" data-i18n="contact_phone_h4">Support Line</h4>
 <p class="text-white font-body">(+84) 983.145.099</p>
 </div>
 </div>
@@ -205,16 +211,16 @@
 <p class="text-zinc-500 dark:text-zinc-400 font-body text-sm leading-relaxed">Leading the renewable energy transition through sustainable wood resource development and global biomass supply chain excellence.</p>
 </div>
 <div>
-<h4 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6 font-headline uppercase text-xs tracking-widest">Navigation</h4>
+<h4 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6 font-headline uppercase text-xs tracking-widest" data-i18n="footer_navigation">Navigation</h4>
 <ul class="space-y-3">
-<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors text-sm font-body" href="index.html#seen">Home</a></li>
-<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors text-sm font-body" href="About us.html">About Us</a></li>
-<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors text-sm font-body" href="Product.html">Products</a></li>
-<li><a class="text-emerald-700 dark:text-emerald-300 font-semibold text-sm font-body" href="Contact.html">Contact</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors text-sm font-body" href="index.html#seen" data-i18n="nav_home">Home</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors text-sm font-body" href="About us.html" data-i18n="nav_about">About Us</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors text-sm font-body" href="Product.html" data-i18n="nav_products">Products</a></li>
+<li><a class="text-emerald-700 dark:text-emerald-300 font-semibold text-sm font-body" href="Contact.html" data-i18n="nav_contact">Contact</a></li>
 </ul>
 </div>
 <div>
-<h4 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6 font-headline uppercase text-xs tracking-widest">Legal</h4>
+<h4 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6 font-headline uppercase text-xs tracking-widest" data-i18n="footer_legal">Legal</h4>
 <ul class="space-y-3">
 <li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors text-sm font-body" href="#">Privacy Policy</a></li>
 <li><a class="text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 transition-colors text-sm font-body" href="#">Terms of Service</a></li>
@@ -223,7 +229,7 @@
 </ul>
 </div>
 <div>
-<h4 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6 font-headline uppercase text-xs tracking-widest">Global Desk</h4>
+<h4 class="text-emerald-800 dark:text-emerald-400 font-bold mb-6 font-headline uppercase text-xs tracking-widest" data-i18n="footer_global_desk">Global Desk</h4>
 <p class="text-zinc-500 dark:text-zinc-400 text-sm font-body leading-relaxed">
                     Hon La Industrial Zone<br/>
                     Quang Binh, VN 510000<br/><br/>
@@ -232,11 +238,12 @@
 </div>
 </div>
 <div class="max-w-7xl mx-auto px-12 py-6 border-t border-zinc-200 dark:border-zinc-800">
-<p class="text-zinc-500 dark:text-zinc-400 text-xs font-body opacity-80">© 2024 DOHWA RESOURCE DEVELOPMENT. All Rights Reserved.</p>
+<p class="text-zinc-500 dark:text-zinc-400 text-xs font-body opacity-80"><span data-i18n="footer_copyright">© 2024 DOHWA RESOURCE DEVELOPMENT. All Rights Reserved.</span></p>
 </div>
 </footer>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="i18n.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const fadeUpSelectors = [
@@ -270,6 +277,8 @@
     });
 </script>
 </body></html>
+
+
 
 
 

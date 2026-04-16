@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
@@ -87,13 +87,19 @@
 <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
 <img src="logo.png" alt="DOHWA RESOURCE DEVELOPMENT" class="h-12 w-auto object-contain" />
 <nav class="hidden md:flex items-center space-x-8 font-['Manrope'] font-bold tracking-tight">
-<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="index.html#seen">Home</a>
-<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="About us.html">About Us</a>
-<a class="text-emerald-700 border-b-2 border-emerald-700 pb-1" href="Product.html">Products</a>
-<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="Certification.html">Certifications</a>
-<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="Contact.html">Contact</a>
+<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="index.html#seen" data-i18n="nav_home">Home</a>
+<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="About us.html" data-i18n="nav_about">About Us</a>
+<a class="text-emerald-700 border-b-2 border-emerald-700 pb-1" href="Product.html" data-i18n="nav_products">Products</a>
+<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="Certification.html" data-i18n="nav_certifications">Certifications</a>
+<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="Contact.html" data-i18n="nav_contact">Contact</a>
 </nav>
-<div class="text-emerald-900 font-bold text-sm tracking-widest">EN / VI / JP</div>
+<span class="text-xs font-bold tracking-widest font-['Manrope'] flex items-center gap-1">
+  <button class="lang-btn text-emerald-700 font-black underline" data-lang="en" onclick="setLang('en')">EN</button>
+  <span class="text-emerald-700/40">/</span>
+  <button class="lang-btn text-emerald-900/50 font-bold" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <span class="text-emerald-700/40">/</span>
+  <button class="lang-btn text-emerald-900/50 font-bold" data-lang="jp" onclick="setLang('jp')">JP</button>
+</span>
 </div>
 </header>
 
@@ -106,9 +112,9 @@
 <div class="absolute inset-0 bg-gradient-to-r from-primary-dark/90 via-primary-dark/40 to-transparent"></div>
 </div>
 <div class="relative z-10 px-12 max-w-2xl">
-<span class="text-white font-label text-sm uppercase tracking-widest mb-4 block font-bold" data-aos="fade-down" data-aos-duration="800" data-aos-delay="0">Premium Biofuel Solution</span>
-<h1 class="text-white text-6xl font-extrabold tracking-tighter mb-6 leading-none" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200"><span class="text-primary">High-Density</span> Wood Pellets</h1>
-<p class="text-zinc-200 text-lg leading-relaxed mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Dohwa's wood pellets are engineered for maximum calorific efficiency and minimal ash residue, sourcing sustainable raw materials across Southeast Asia.</p>
+<span class="text-white font-label text-sm uppercase tracking-widest mb-4 block font-bold" data-aos="fade-down" data-aos-duration="800" data-aos-delay="0" data-i18n="prod_badge">Premium Biofuel Solution</span>
+<h1 class="text-white text-6xl font-extrabold tracking-tighter mb-6 leading-none" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200"><span class="text-primary" data-i18n="prod_h1_span">High-Density</span><span data-i18n="prod_h1_end"> Wood Pellets</span></h1>
+<p class="text-zinc-200 text-lg leading-relaxed mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><span data-i18n="prod_hero_p">Dohwa's wood pellets are engineered for maximum calorific efficiency and minimal ash residue, sourcing sustainable raw materials across Southeast Asia.</span></p>
 <button class="bg-primary text-white px-8 py-4 font-bold flex items-center gap-3 hover:bg-emerald-600 transition-all rounded shadow-lg scale-95 active:scale-90" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
 <span class="material-symbols-outlined" data-icon="download">download</span>
                         Download PDF Specifications
@@ -120,27 +126,27 @@
 <section class="max-w-7xl mx-auto px-8 mb-24">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
 <div class="lg:col-span-5">
-<h2 class="text-3xl font-extrabold text-primary-dark mb-6 tracking-tight">Technical Specifications</h2>
+<h2 class="text-3xl font-extrabold text-primary-dark mb-6 tracking-tight" data-i18n="prod_specs_h2">Technical Specifications</h2>
 <p class="text-on-surface-variant mb-10 leading-relaxed">Our production standards strictly adhere to ENplus A1 and A2 certifications, ensuring consistent burn rates and equipment longevity for industrial power plants and residential heating.</p>
 <div class="space-y-1">
 <div class="flex justify-between py-4 border-b border-outline-variant/20">
-<span class="font-semibold text-primary-dark">Diameter</span>
+<span class="font-semibold text-primary-dark" data-i18n="prod_diameter">Diameter</span>
 <span class="text-on-surface-variant">6mm - 8mm (± 1.0)</span>
 </div>
 <div class="flex justify-between py-4 border-b border-outline-variant/20">
-<span class="font-semibold text-primary-dark">Length</span>
+<span class="font-semibold text-primary-dark" data-i18n="prod_length">Length</span>
 <span class="text-on-surface-variant">3.15 &lt; L ≤ 40mm</span>
 </div>
 <div class="flex justify-between py-4 border-b border-outline-variant/20">
-<span class="font-semibold text-primary-dark">Ash Content</span>
+<span class="font-semibold text-primary-dark" data-i18n="prod_ash">Ash Content</span>
 <span class="text-on-surface-variant">≤ 0.7% (Dry Basis)</span>
 </div>
 <div class="flex justify-between py-4 border-b border-outline-variant/20">
-<span class="font-semibold text-primary-dark">Moisture</span>
+<span class="font-semibold text-primary-dark" data-i18n="prod_moisture">Moisture</span>
 <span class="text-on-surface-variant">≤ 10%</span>
 </div>
 <div class="flex justify-between py-4 border-b border-outline-variant/20">
-<span class="font-semibold text-primary-dark">Calorific Value</span>
+<span class="font-semibold text-primary-dark" data-i18n="prod_caloric">Calorific Value</span>
 <span class="text-on-surface-variant">≥ 17.5 MJ/kg (As Received)</span>
 </div>
 </div>
@@ -148,7 +154,7 @@
 <div class="lg:col-span-1 hidden lg:block"></div>
 <div class="lg:col-span-6">
 <div class="bg-surface-container rounded-lg p-10 h-full border border-outline-variant/20">
-<h3 class="font-headline font-bold text-xl text-primary-dark mb-8">Physical Characteristics</h3>
+<h3 class="font-headline font-bold text-xl text-primary-dark mb-8" data-i18n="prod_chars_h3">Physical Characteristics</h3>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div>
 <h4 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4 flex items-center gap-2">
@@ -165,7 +171,7 @@
 </div>
 <div class="mt-12 pt-8 border-t border-outline-variant/20">
 <img alt="Wood material detail" class="w-full h-48 object-cover rounded" src="go-detail.jpg"/>
-<p class="text-[10px] text-zinc-400 mt-4 uppercase tracking-[0.2em] font-medium text-center">Macro Analysis — Premium Grade A1</p>
+<p class="text-[10px] text-zinc-400 mt-4 uppercase tracking-[0.2em] font-medium text-center"><span data-i18n="prod_macro">Macro Analysis — Premium Grade A1</span></p>
 </div>
 </div>
 </div>
@@ -174,7 +180,7 @@
 <!-- Comparison Section -->
 <section class="max-w-7xl mx-auto px-8 mb-24 py-24 bg-primary-dark rounded-lg text-white">
 <div class="text-center max-w-2xl mx-auto mb-16">
-<h2 class="text-4xl font-extrabold tracking-tighter mb-4">Industrial Grade Standards</h2>
+<h2 class="text-4xl font-extrabold tracking-tighter mb-4" data-i18n="prod_grade_h2">Industrial Grade Standards</h2>
 <p class="text-emerald-100/70">Our products exceed standard parameters for industrial and residential use, ensuring maximum heat output and minimum maintenance.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -206,16 +212,16 @@
             </p>
 </div>
 <div>
-<h5 class="text-emerald-800 font-bold mb-6">Navigation</h5>
+<h5 class="text-emerald-800 font-bold mb-6" data-i18n="footer_navigation">Navigation</h5>
 <ul class="space-y-4">
-<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="index.html#seen">Home</a></li>
-<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="About us.html">About Us</a></li>
-<li><a class="text-emerald-700 font-semibold" href="Product.html">Products</a></li>
-<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="Certification.html">Certifications</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="index.html#seen" data-i18n="nav_home">Home</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="About us.html" data-i18n="nav_about">About Us</a></li>
+<li><a class="text-emerald-700 font-semibold" href="Product.html" data-i18n="nav_products">Products</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="Certification.html" data-i18n="nav_certifications">Certifications</a></li>
 </ul>
 </div>
 <div>
-<h5 class="text-emerald-800 font-bold mb-6">Connect</h5>
+<h5 class="text-emerald-800 font-bold mb-6" data-i18n="footer_connect">Connect</h5>
 <ul class="space-y-4">
 <li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Contact Us</a></li>
 <li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Linkedin</a></li>
@@ -223,7 +229,7 @@
 </ul>
 </div>
 <div>
-<h5 class="text-emerald-800 font-bold mb-6">Legal</h5>
+<h5 class="text-emerald-800 font-bold mb-6" data-i18n="footer_legal">Legal</h5>
 <ul class="space-y-4">
 <li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Privacy Policy</a></li>
 <li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Terms of Service</a></li>
@@ -233,11 +239,12 @@
 </div>
 </div>
 <div class="bg-zinc-200 py-8 text-center text-[10px] text-zinc-500 uppercase tracking-widest">
-        © 2024 DOHWA RESOURCE DEVELOPMENT. All Rights Reserved.
+        <span data-i18n="footer_copyright">© 2024 DOHWA RESOURCE DEVELOPMENT. All Rights Reserved.</span>
     </div>
 </footer>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="i18n.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const fadeUpSelectors = [
@@ -271,3 +278,5 @@
     });
 </script>
 </body></html>
+
+

@@ -127,14 +127,20 @@
 <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
 <img src="logo.png" alt="DOHWA RESOURCE DEVELOPMENT" class="h-12 w-auto object-contain" />
 <nav class="hidden md:flex items-center space-x-8 font-['Manrope'] font-bold tracking-tight">
-<a class="text-emerald-700 border-b-2 border-emerald-700 pb-1" href="index.html#seen">Home</a>
-<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="About us.html">About Us</a>
-<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="Product.html">Products</a>
-<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="Certification.html">Certifications</a>
-<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="Contact.html">Contact</a>
+<a class="text-emerald-700 border-b-2 border-emerald-700 pb-1" href="index.html#seen" data-i18n="nav_home">Home</a>
+<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="About us.html" data-i18n="nav_about">About Us</a>
+<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="Product.html" data-i18n="nav_products">Products</a>
+<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="Certification.html" data-i18n="nav_certifications">Certifications</a>
+<a class="text-zinc-600 hover:text-emerald-600 transition-colors" href="Contact.html" data-i18n="nav_contact">Contact</a>
 </nav>
 <div class="flex items-center space-x-4">
-<span class="text-xs font-bold tracking-widest text-emerald-700/60 font-['Manrope']">EN / VI / JP</span>
+<span class="text-xs font-bold tracking-widest font-['Manrope'] flex items-center gap-1">
+  <button class="lang-btn text-emerald-700 font-black underline" data-lang="en" onclick="setLang('en')">EN</button>
+  <span class="text-emerald-700/40">/</span>
+  <button class="lang-btn text-emerald-900/50 font-bold" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <span class="text-emerald-700/40">/</span>
+  <button class="lang-btn text-emerald-900/50 font-bold" data-lang="jp" onclick="setLang('jp')">JP</button>
+</span>
 <button class="md:hidden p-2 text-emerald-700">
 <span class="material-symbols-outlined">menu</span>
 </button>
@@ -151,20 +157,20 @@
 </div>
 <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
 <div class="max-w-2xl">
-<span class="inline-block px-4 py-1 bg-tertiary-container text-on-tertiary-container font-label text-xs font-bold uppercase tracking-[0.2em] mb-6 rounded-sm" data-aos="fade-down" data-aos-delay="0">
+<span class="inline-block px-4 py-1 bg-tertiary-container text-on-tertiary-container font-label text-xs font-bold uppercase tracking-[0.2em] mb-6 rounded-sm" data-aos="fade-down" data-aos-delay="0" data-i18n="idx_badge">
                         Vietnam's Leading Manufacturer
                     </span>
 <h1 class="font-headline text-6xl md:text-8xl font-extrabold text-white leading-none tracking-tighter mb-6" data-aos="fade-up" data-aos-delay="100">
-    <span class="text-primary counter" data-target="100000">0</span> tons/year capacity
+    <span class="text-primary counter" data-target="100000">0</span> <span data-i18n="idx_hero_h1">tons/year capacity</span>
 </h1>
-<p class="font-body text-xl text-primary-fixed leading-relaxed mb-10 max-w-lg" data-aos="fade-up" data-aos-delay="200">
+<p class="font-body text-xl text-primary-fixed leading-relaxed mb-10 max-w-lg" data-aos="fade-up" data-aos-delay="200" data-i18n="idx_hero_p">
     Leading Wood Pellet Manufacturer in Vietnam, driving global energy transitions with industrial scale and organic precision.
 </p>
 <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="300">
-<a href="Product.html" class="px-8 py-4 bg-primary text-on-primary font-bold tracking-tight rounded-lg hover:brightness-110 transition-all uppercase text-sm inline-block">
+<a href="Product.html" class="px-8 py-4 bg-primary text-on-primary font-bold tracking-tight rounded-lg hover:brightness-110 transition-all uppercase text-sm inline-block" data-i18n="idx_btn_explore">
     Explore Products
 </a>
-<a href="About us.html" class="px-8 py-4 bg-white/10 backdrop-blur-md text-white border border-white/20 font-bold tracking-tight rounded-lg hover:bg-white/20 transition-all uppercase text-sm inline-block">
+<a href="About us.html" class="px-8 py-4 bg-white/10 backdrop-blur-md text-white border border-white/20 font-bold tracking-tight rounded-lg hover:bg-white/20 transition-all uppercase text-sm inline-block" data-i18n="idx_btn_profile">
     Company Profile
 </a>
 </div>
@@ -176,33 +182,33 @@
 <section class="py-24 bg-surface px-8">
 <div class="max-w-7xl mx-auto">
 <div class="mb-16" data-aos="fade-up">
-<h2 class="font-headline text-4xl font-extrabold text-primary-dark tracking-tight">Core Operational Values</h2>
-<p class="text-on-surface-variant mt-2 max-w-xl">Pillars of our commitment to industrial excellence and environmental stewardship.</p>
+<h2 class="font-headline text-4xl font-extrabold text-primary-dark tracking-tight" data-i18n="idx_values_h2">Core Operational Values</h2>
+<p class="text-on-surface-variant mt-2 max-w-xl" data-i18n="idx_values_p">Pillars of our commitment to industrial excellence and environmental stewardship.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
 <!-- Quality -->
 <div class="group p-8 bg-surface-container-low border-l-4 border-primary hover:bg-surface-container-high transition-all duration-300 rounded-lg" data-aos="fade-up" data-aos-delay="0">
 <span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="verified">verified</span>
-<h3 class="font-headline text-xl font-bold text-primary-dark mb-4">Quality</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Rigorous laboratory testing ensuring high calorific value and minimal ash content for industrial boilers.</p>
+<h3 class="font-headline text-xl font-bold text-primary-dark mb-4" data-i18n="idx_val1_h3">Quality</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed" data-i18n="idx_val1_p">Rigorous laboratory testing ensuring high calorific value and minimal ash content for industrial boilers.</p>
 </div>
 <!-- Logistics -->
 <div class="group p-8 bg-surface-container-low border-l-4 border-primary hover:bg-surface-container-high transition-all duration-300 rounded-lg" data-aos="fade-up" data-aos-delay="100">
 <span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="conveyor_belt">conveyor_belt</span>
-<h3 class="font-headline text-xl font-bold text-primary-dark mb-4">Logistics</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">End-to-end supply chain management with proximity to major deep-water ports for seamless export.</p>
+<h3 class="font-headline text-xl font-bold text-primary-dark mb-4" data-i18n="idx_val2_h3">Logistics</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed" data-i18n="idx_val2_p">End-to-end supply chain management with proximity to major deep-water ports for seamless export.</p>
 </div>
 <!-- Sustainability -->
 <div class="group p-8 bg-surface-container-low border-l-4 border-primary hover:bg-surface-container-high transition-all duration-300 rounded-lg" data-aos="fade-up" data-aos-delay="200">
 <span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="eco">eco</span>
-<h3 class="font-headline text-xl font-bold text-primary-dark mb-4">Sustainability</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">100% renewable raw materials sourced from managed forests, reducing global carbon footprints.</p>
+<h3 class="font-headline text-xl font-bold text-primary-dark mb-4" data-i18n="idx_val3_h3">Sustainability</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed" data-i18n="idx_val3_p">100% renewable raw materials sourced from managed forests, reducing global carbon footprints.</p>
 </div>
 <!-- Conscientious -->
 <div class="group p-8 bg-surface-container-low border-l-4 border-primary hover:bg-surface-container-high transition-all duration-300 rounded-lg" data-aos="fade-up" data-aos-delay="300">
 <span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="handshake">handshake</span>
-<h3 class="font-headline text-xl font-bold text-primary-dark mb-4">Conscientious</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Dedicated ethical labor practices and community development initiatives in manufacturing regions.</p>
+<h3 class="font-headline text-xl font-bold text-primary-dark mb-4" data-i18n="idx_val4_h3">Conscientious</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed" data-i18n="idx_val4_p">Dedicated ethical labor practices and community development initiatives in manufacturing regions.</p>
 </div>
 </div>
 </div>
@@ -213,35 +219,35 @@
 <div class="max-w-7xl mx-auto">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div data-aos="fade-right">
-<span class="text-primary font-bold text-xs uppercase tracking-widest mb-4 block">Operational Excellence</span>
-<h2 class="font-headline text-4xl md:text-5xl font-black text-primary-dark mb-8 leading-tight">Wood Pellet Production Process</h2>
+<span class="text-primary font-bold text-xs uppercase tracking-widest mb-4 block" data-i18n="idx_process_badge">Operational Excellence</span>
+<h2 class="font-headline text-4xl md:text-5xl font-black text-primary-dark mb-8 leading-tight" data-i18n="idx_process_h2">Wood Pellet Production Process</h2>
 <div class="relative space-y-6">
 <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="0">
 <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 text-emerald-700 font-bold text-xs mt-1">1</div>
 <div>
-<h4 class="font-bold text-primary-dark">Sourcing & Preparation</h4>
-<p class="text-zinc-500 text-sm">Raw material (Acacia, Eucalyptus) undergoes debarking (up to 90% purity) and chipping into uniform fiber.</p>
+<h4 class="font-bold text-primary-dark" data-i18n="idx_step1_h4">Sourcing & Preparation</h4>
+<p class="text-zinc-500 text-sm" data-i18n="idx_step1_p">Raw material (Acacia, Eucalyptus) undergoes debarking (up to 90% purity) and chipping into uniform fiber.</p>
 </div>
 </div>
 <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="100">
 <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 text-emerald-700 font-bold text-xs mt-1">2</div>
 <div>
-<h4 class="font-bold text-primary-dark">Refinement & Drying</h4>
-<p class="text-zinc-500 text-sm">Hammer mills pulverize wood into fine material, while magnetic separators remove impurities before entering high-efficiency dryers.</p>
+<h4 class="font-bold text-primary-dark" data-i18n="idx_step2_h4">Refinement & Drying</h4>
+<p class="text-zinc-500 text-sm" data-i18n="idx_step2_p">Hammer mills pulverize wood into fine material, while magnetic separators remove impurities before entering high-efficiency dryers.</p>
 </div>
 </div>
 <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="200">
 <div class="w-8 h-8 rounded-full bg-emerald-600 flex items-center justify-center shrink-0 text-white font-bold text-xs mt-1">3</div>
 <div>
-<h4 class="font-bold text-primary-dark">Precision Pelletizing</h4>
-<p class="text-zinc-500 text-sm">Fine material is extruded through heavy-duty pelletizing dies to create high-density, energy-rich pellets.</p>
+<h4 class="font-bold text-primary-dark" data-i18n="idx_step3_h4">Precision Pelletizing</h4>
+<p class="text-zinc-500 text-sm" data-i18n="idx_step3_p">Fine material is extruded through heavy-duty pelletizing dies to create high-density, energy-rich pellets.</p>
 </div>
 </div>
 <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="300">
 <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 text-emerald-700 font-bold text-xs mt-1">4</div>
 <div>
-<h4 class="font-bold text-primary-dark">Cooling & Global Export</h4>
-<p class="text-zinc-500 text-sm">Final pellets are cooled, screened for quality, and shipped globally via major regional ports.</p>
+<h4 class="font-bold text-primary-dark" data-i18n="idx_step4_h4">Cooling & Global Export</h4>
+<p class="text-zinc-500 text-sm" data-i18n="idx_step4_p">Final pellets are cooled, screened for quality, and shipped globally via major regional ports.</p>
 </div>
 </div>
 </div>
@@ -271,28 +277,28 @@
 </div>
 </div>
 <div class="w-full lg:w-2/5" data-aos="fade-up">
-<span class="text-emerald-400 font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Future Goals</span>
-<h2 class="font-headline text-5xl font-black mb-10 leading-none">Global Sector <br/><span class="text-emerald-500">Leadership.</span></h2>
+<span class="text-emerald-400 font-bold text-xs uppercase tracking-[0.3em] mb-4 block" data-i18n="idx_goals_badge">Future Goals</span>
+<h2 class="font-headline text-5xl font-black mb-10 leading-none"><span data-i18n="idx_goals_h2">Global Sector</span> <br/><span class="text-emerald-500" data-i18n="idx_goals_h2_span">Leadership.</span></h2>
 <ul class="space-y-8">
 <li class="flex gap-6">
 <span class="material-symbols-outlined text-emerald-400 shrink-0">speed</span>
 <div>
-<h4 class="font-bold text-xl mb-2">100k Capacity Target</h4>
-<p class="text-emerald-100/70 text-sm leading-relaxed">Reaching operational stability of 100,000 tons/year from Q1/2026, ensuring sustainable supply across Quang Tri & Ha Tinh.</p>
+<h4 class="font-bold text-xl mb-2" data-i18n="idx_goal1_h4">100k Capacity Target</h4>
+<p class="text-emerald-100/70 text-sm leading-relaxed" data-i18n="idx_goal1_p">Reaching operational stability of 100,000 tons/year from Q1/2026, ensuring sustainable supply across Quang Tri & Ha Tinh.</p>
 </div>
 </li>
 <li class="flex gap-6">
 <span class="material-symbols-outlined text-emerald-400 shrink-0">public</span>
 <div>
-<h4 class="font-bold text-xl mb-2">Top 5 Exporter Vision</h4>
-<p class="text-emerald-100/70 text-sm leading-relaxed">Becoming a top 5 Vietnamese wood pellet exporter, supplying I2 standard products to Japan, Korea, and EU markets.</p>
+<h4 class="font-bold text-xl mb-2" data-i18n="idx_goal2_h4">Top 5 Exporter Vision</h4>
+<p class="text-emerald-100/70 text-sm leading-relaxed" data-i18n="idx_goal2_p">Becoming a top 5 Vietnamese wood pellet exporter, supplying I2 standard products to Japan, Korea, and EU markets.</p>
 </div>
 </li>
 <li class="flex gap-6">
 <span class="material-symbols-outlined text-emerald-400 shrink-0">verified</span>
 <div>
-<h4 class="font-bold text-xl mb-2">Quality Benchmarks</h4>
-<p class="text-emerald-100/70 text-sm leading-relaxed">Full maintenance and integration of ISO 9001, ISO 14001, and PEFC-COC certification systems by 2026.</p>
+<h4 class="font-bold text-xl mb-2" data-i18n="idx_goal3_h4">Quality Benchmarks</h4>
+<p class="text-emerald-100/70 text-sm leading-relaxed" data-i18n="idx_goal3_p">Full maintenance and integration of ISO 9001, ISO 14001, and PEFC-COC certification systems by 2026.</p>
 </div>
 </li>
 </ul>
@@ -308,16 +314,16 @@
 <div class="max-w-7xl mx-auto px-8 relative z-10">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 <div>
-<span class="font-label text-xs font-bold uppercase tracking-[0.3em] text-on-primary-container mb-4 block" data-aos="fade-down">International Standards</span>
-<h2 class="font-headline text-5xl font-extrabold mb-8 leading-tight" data-aos="fade-up">Global Trust, Certified Locally.</h2>
+<span class="font-label text-xs font-bold uppercase tracking-[0.3em] text-on-primary-container mb-4 block" data-aos="fade-down" data-i18n="idx_cert_badge">International Standards</span>
+<h2 class="font-headline text-5xl font-extrabold mb-8 leading-tight" data-aos="fade-up" data-i18n="idx_cert_h2">Global Trust, Certified Locally.</h2>
 <div class="space-y-6">
 <div class="flex gap-4 items-start" data-aos="fade-up" data-aos-delay="100">
 <div class="bg-primary p-3 rounded-lg">
 <span class="material-symbols-outlined text-white">license</span>
 </div>
 <div>
-<h4 class="font-bold text-lg mb-1">PEFC™ Chain of Custody</h4>
-<p class="text-emerald-50/70 text-sm">Ensuring every ton of wood pellet is traceable back to sustainably managed forests.</p>
+<h4 class="font-bold text-lg mb-1" data-i18n="idx_cert1_h4">PEFC™ Chain of Custody</h4>
+<p class="text-emerald-50/70 text-sm" data-i18n="idx_cert1_p">Ensuring every ton of wood pellet is traceable back to sustainably managed forests.</p>
 </div>
 </div>
 <div class="flex gap-4 items-start" data-aos="fade-up" data-aos-delay="200">
@@ -326,7 +332,7 @@
 </div>
 <div>
 <h4 class="font-bold text-lg mb-1">ISO 9001:2015</h4>
-<p class="text-emerald-50/70 text-sm">International quality management systems applied across all production lines.</p>
+<p class="text-emerald-50/70 text-sm" data-i18n="idx_cert2_p">International quality management systems applied across all production lines.</p>
 </div>
 </div>
 </div>
@@ -337,7 +343,7 @@
 </div>
 <div class="absolute -bottom-8 -left-8 bg-tertiary-container p-8 max-w-xs shadow-2xl rounded-lg">
 <span class="block text-4xl font-headline font-black text-on-tertiary-container mb-2">98%</span>
-<span class="text-xs font-bold uppercase tracking-widest text-white/80">Export Compliance Rating</span>
+<span class="text-xs font-bold uppercase tracking-widest text-white/80" data-i18n="idx_cert_badge2">Export Compliance Rating</span>
 </div>
 </div>
 </div>
@@ -348,24 +354,24 @@
 <section class="py-24 bg-surface-container-low px-8">
 <div class="max-w-7xl mx-auto">
 <div class="text-center mb-16" data-aos="fade-up">
-<h2 class="font-headline text-4xl font-extrabold text-primary-dark tracking-tight">Technical Specifications</h2>
+<h2 class="font-headline text-4xl font-extrabold text-primary-dark tracking-tight" data-i18n="idx_specs_h2">Technical Specifications</h2>
 <div class="w-12 h-1 bg-primary mx-auto mt-4"></div>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-1 rounded-lg overflow-hidden">
 <div class="bg-white p-10 flex flex-col items-center justify-center text-center" data-aos="zoom-in" data-aos-delay="0">
-<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Moisture Content</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2" data-i18n="idx_spec1_label">Moisture Content</span>
 <span class="font-headline text-3xl font-extrabold text-primary-dark">≤ 8.0%</span>
 </div>
 <div class="bg-white p-10 flex flex-col items-center justify-center text-center" data-aos="zoom-in" data-aos-delay="100">
-<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Ash Content</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2" data-i18n="idx_spec2_label">Ash Content</span>
 <span class="font-headline text-3xl font-extrabold text-primary-dark">≤ 1.5%</span>
 </div>
 <div class="bg-white p-10 flex flex-col items-center justify-center text-center" data-aos="zoom-in" data-aos-delay="200">
-<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Calorific Value</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2" data-i18n="idx_spec3_label">Calorific Value</span>
 <span class="font-headline text-3xl font-extrabold text-primary-dark">4500 kcal</span>
 </div>
 <div class="bg-white p-10 flex flex-col items-center justify-center text-center" data-aos="zoom-in" data-aos-delay="300">
-<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Diameter</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2" data-i18n="idx_spec4_label">Diameter</span>
 <span class="font-headline text-3xl font-extrabold text-primary-dark">6 - 8mm</span>
 </div>
 </div>
@@ -379,9 +385,9 @@
 <img class="w-full h-full object-cover" data-alt="Cargo Ship" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6OVN0U0yDv5rWIjbK4P6aVX5f1gvQR7ZN3flkHNoTmchHX_HHN0DO7FNINww-7OvzGOGET-qpsO2gpcfQo-PZkqLDXr3gYWJC2K0EkKlMgmpzMj07UJvMS0BGwkye5-5SDaOqrph5ySCJvN7_07UjswRh1YQUu-P5qAQdJ1kmlOKtu0c1pS5P4b7GMEOnkqAIC86KFOJno9bCRbwnuYrv6Zy3QzFG1uulQ_u0JAHgIl0jz3ZPEUGAbkj6dAfGKAshIL3t0g7GLttZ"/>
 </div>
 <div class="p-12 md:p-16 w-full md:w-1/2" data-aos="fade-left" data-aos-delay="400">
-<h3 class="font-headline text-3xl font-extrabold text-primary-dark mb-6">Partner with Vietnam's Wood Resource Leaders.</h3>
-<p class="text-on-surface-variant mb-8 leading-relaxed">Discuss your bulk requirements with our logistics and technical teams today.</p>
-<button class="w-full bg-primary-dark text-white py-4 font-bold tracking-widest uppercase text-xs hover:bg-primary transition-all rounded-lg">
+<h3 class="font-headline text-3xl font-extrabold text-primary-dark mb-6" data-i18n="idx_cta_h3">Partner with Vietnam's Wood Resource Leaders.</h3>
+<p class="text-on-surface-variant mb-8 leading-relaxed" data-i18n="idx_cta_p">Discuss your bulk requirements with our logistics and technical teams today.</p>
+<button class="w-full bg-primary-dark text-white py-4 font-bold tracking-widest uppercase text-xs hover:bg-primary transition-all rounded-lg" data-i18n="idx_cta_btn">
                         Initiate Partnership Inquiry
                     </button>
 </div>
@@ -391,12 +397,12 @@
 
 <footer class="bg-zinc-100 dark:bg-zinc-900 w-full border-t border-zinc-200">
 <div class="relative py-4 text-center text-[10px] text-zinc-400 uppercase tracking-widest border-b border-zinc-200/50">
-    Updated: April 8, 2026 | Build v2.1.2
+    <span data-i18n="footer_update">Updated: April 8, 2026 | Build v2.1.2</span>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-12 py-16 max-w-7xl mx-auto font-['Manrope'] text-sm leading-relaxed">
 <div class="space-y-6">
 <img src="logo.png" alt="DOHWA RESOURCE DEVELOPMENT" class="h-10 w-auto object-contain" />
-<p class="text-zinc-500">
+<p class="text-zinc-500" data-i18n="footer_pioneering">
                     Pioneering renewable biomass energy solutions through large-scale wood pellet production and global export logistics.
                 </p>
 <div class="flex space-x-4">
@@ -405,25 +411,25 @@
 </div>
 </div>
 <div>
-<h5 class="text-emerald-800 font-bold mb-6 uppercase tracking-wider text-xs">Quick Links</h5>
+<h5 class="text-emerald-800 font-bold mb-6 uppercase tracking-wider text-xs" data-i18n="footer_quick_links">Quick Links</h5>
 <ul class="space-y-4">
-<li><a class="text-emerald-700 font-semibold hover:text-emerald-600 transition-colors" href="index.html#seen">Home</a></li>
-<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="About us.html">About Us</a></li>
-<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="Product.html">Products</a></li>
-<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="Certification.html">Certifications</a></li>
+<li><a class="text-emerald-700 font-semibold hover:text-emerald-600 transition-colors" href="index.html#seen" data-i18n="nav_home">Home</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="About us.html" data-i18n="nav_about">About Us</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="Product.html" data-i18n="nav_products">Products</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="Certification.html" data-i18n="nav_certifications">Certifications</a></li>
 </ul>
 </div>
 <div>
-<h5 class="text-emerald-800 font-bold mb-6 uppercase tracking-wider text-xs">Support</h5>
+<h5 class="text-emerald-800 font-bold mb-6 uppercase tracking-wider text-xs" data-i18n="footer_support">Support</h5>
 <ul class="space-y-4">
-<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="Contact.html">Contact</a></li>
-<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Terms of Service</a></li>
-<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#">Sustainability Report</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="Contact.html" data-i18n="nav_contact">Contact</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#" data-i18n="footer_privacy">Privacy Policy</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#" data-i18n="footer_terms">Terms of Service</a></li>
+<li><a class="text-zinc-500 hover:text-emerald-600 transition-colors" href="#" data-i18n="footer_sustain_report">Sustainability Report</a></li>
 </ul>
 </div>
 <div>
-<h5 class="text-emerald-800 font-bold mb-6 uppercase tracking-wider text-xs">Open For Discussion</h5>
+<h5 class="text-emerald-800 font-bold mb-6 uppercase tracking-wider text-xs" data-i18n="footer_open_for">Open For Discussion</h5>
 <address class="not-italic text-zinc-500 space-y-3 leading-relaxed">
 <p><strong class="text-emerald-900 dark:text-emerald-50">Address:</strong> Hon La Seaport Industrial Park, Phu Trach Commune, Quang Tri Province</p>
 <p><strong class="text-emerald-900 dark:text-emerald-50">Email:</strong> dohwa.drd@gmail.com</p>
@@ -436,16 +442,17 @@
 </div>
 <div class="bg-zinc-200 px-12 py-8">
 <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="text-xs text-zinc-500">© 2024 DOHWA RESOURCE DEVELOPMENT. All Rights Reserved.</p>
+<p class="text-xs text-zinc-500" data-i18n="footer_copyright">© 2024 DOHWA RESOURCE DEVELOPMENT. All Rights Reserved.</p>
 <div class="flex gap-6 text-xs text-zinc-500">
-<a class="hover:text-emerald-600 transition-colors" href="#">Environmental Impact</a>
-<a class="hover:text-emerald-600 transition-colors" href="#">Sustainability Report</a>
+<a class="hover:text-emerald-600 transition-colors" href="#" data-i18n="footer_env_impact">Environmental Impact</a>
+<a class="hover:text-emerald-600 transition-colors" href="#" data-i18n="footer_sustain_report">Sustainability Report</a>
 </div>
 </div>
 </div>
 </footer>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="i18n.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         // Counter animation
