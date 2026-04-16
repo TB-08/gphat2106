@@ -1,6 +1,7 @@
 /**
  * DOHWA RESOURCE DEVELOPMENT — i18n Language System
  * Supports: EN (English), VI (Vietnamese), JP (Japanese)
+ * 100% Coverage for all 5 pages
  */
 
 const translations = {
@@ -37,12 +38,12 @@ const translations = {
   footer_support:      { en: 'Support',         vi: 'Hỗ Trợ',          jp: 'サポート' },
   footer_open_for:     { en: 'Open For Discussion', vi: 'Liên Hệ Thảo Luận', jp: 'お問い合わせ可能' },
   footer_navigation:   { en: 'Navigation',      vi: 'Điều Hướng',      jp: 'ナビゲーション' },
-  footer_connect:      { en: 'Connect',         vi: 'Kết Nối',          jp: 'コネクト' },
+  footer_connect:      { en: 'Connect',         vi: 'Kết Nối',          jp: 'つながる' },
   footer_legal:        { en: 'Legal',           vi: 'Pháp Lý',          jp: '法的情報' },
   footer_company:      { en: 'Company',         vi: 'Công Ty',          jp: '会社' },
   footer_global_desk:  { en: 'Global Desk',     vi: 'Văn Phòng Toàn Cầu', jp: 'グローバルデスク' },
   footer_privacy:      { en: 'Privacy Policy',  vi: 'Chính Sách Bảo Mật', jp: 'プライバシーポリシー' },
-  footer_terms:        { en: 'Terms of Service',vi: 'Điều Khoản Dịch Vụ', jp: '利用規約' },
+  footer_terms:        { en: 'Terms of Service', vi: 'Điều Khoản Dịch Vụ', jp: '利用規約' },
   footer_env_impact:   { en: 'Environmental Impact', vi: 'Tác Động Môi Trường', jp: '環境への影響' },
   footer_sustain_report:{ en: 'Sustainability Report', vi: 'Báo Cáo Phát Triển Bền Vững', jp: 'サステナビリティレポート' },
   footer_contact_us:   { en: 'Contact Us',      vi: 'Liên Hệ Chúng Tôi', jp: 'お問い合わせ' },
@@ -56,15 +57,12 @@ const translations = {
   footer_capacity_label:{ en: 'Capacity:', vi: 'Công suất:', jp: '生産能力：' },
   footer_land_label:   { en: 'Land Use:', vi: 'Diện tích:', jp: '土地使用：' },
   footer_material_label:{ en: 'Material:', vi: 'Nguyên liệu:', jp: '原材料：' },
-  footer_address_val:  { en: 'Hon La Seaport Industrial Park, Phu Trach Commune, Quang Tri Province', vi: 'Khu Công nghiệp Cảng Hòn La, Xã Phú Trạch, Tỉnh Quảng Bình', jp: '工業団地ホンラ港、フートラック村、クアンビン省' },
+  footer_address_val:  { en: 'Hon La Seaport Industrial Park, Phu Trach Commune, Quang Binh Province', vi: 'Khu Công nghiệp Cảng Hòn La, Xã Phú Trạch, Tỉnh Quảng Bình', jp: '工業団地ホンラ港、フートラック村、クアンビン省' },
+  footer_capacity_val: { en: '100,000 tons/ year', vi: '100.000 tấn/năm', jp: '100,000トン/年' },
+  footer_land_val:     { en: '100,000 m²', vi: '100.000 m²', jp: '100,000 m²' },
   footer_material_val: { en: 'We purchase raw materials from Ha Tinh and Quang Tri provinces.', vi: 'Chúng tôi thu mua nguyên liệu từ các tỉnh Hà Tĩnh và Quảng Trị.', jp: '原材料はハティン省とクアンチ省から調達しています。' },
-  footer_address_index:{ en: 'Hon La Seaport Industrial Park, Phu Trach Commune, Quang Tri Province', vi: 'Khu Công nghiệp Cảng Hòn La, Xã Phú Trạch, Tỉnh Quảng Bình', jp: '工業団地ホンラ港、フートラック村、クアンビン省' },
-  footer_global_desk_val: {
-    en: 'Hon La Industrial Zone\nQuang Binh, VN 510000\n\nMon - Fri: 08:00 - 18:00 (GMT+7)',
-    vi: 'Khu CN Hòn La\nQuảng Bình, VN 510000\n\nThứ 2 - Thứ 6: 08:00 - 18:00 (GMT+7)',
-    jp: 'ホンラ工業団地\nクアンビン、VN 510000\n\n月〜金: 08:00 - 18:00 (GMT+7)'
-  },
   footer_update:       { en: 'Updated: April 8, 2026 | Build v2.1.2', vi: 'Cập nhật: 8 tháng 4, 2026 | Phiên bản v2.1.2', jp: '更新日: 2026年4月8日 | ビルド v2.1.2' },
+  footer_working_hours:{ en: 'Mon - Fri: 08:00 - 18:00 (GMT+7)', vi: 'Thứ 2 - Thứ 6: 08:00 - 18:00 (GMT+7)', jp: '月〜金: 08:00 - 18:00 (GMT+7)' },
   sidenav_quote:       { en: 'Request Quote', vi: 'Yêu Cầu Báo Giá', jp: '見積依頼' },
 
   // ===================== INDEX PAGE =====================
@@ -112,7 +110,7 @@ const translations = {
 
   idx_cert_badge:  { en: 'International Standards', vi: 'Tiêu Chuẩn Quốc Tế', jp: '国際基準' },
   idx_cert_h2:     { en: 'Global Trust, Certified Locally.', vi: 'Tin Tưởng Toàn Cầu, Chứng Nhận Địa Phương.', jp: 'グローバルな信頼、ローカル認証。' },
-  idx_cert1_h4:    { en: 'PEFC™ Chain of Custody', vi: 'Chuỗi Hành Trình Sản Phẩm PEFC™', jp: 'PEFC™ 認証の管理 (CoC)' },
+  idx_cert1_h4:    { en: 'PEFC™ Chain of Custody', vi: 'Chuỗi Hành Trình Sản Phẩm PEFC™', jp: 'PEFC™ CoC（管理の連鎖）' },
   idx_cert1_p:     { en: 'Ensuring every ton of wood pellet is traceable back to sustainably managed forests.', vi: 'Đảm bảo mỗi tấn viên nén gỗ có thể truy xuất nguồn gốc đến rừng được quản lý bền vững.', jp: '木質ペレット1トンごとに持続可能に管理された森林への追跡可能性を確保。' },
   idx_cert2_h4:    { en: 'ISO 9001:2015', vi: 'ISO 9001:2015', jp: 'ISO 9001:2015' },
   idx_cert2_p:     { en: 'International quality management systems applied across all production lines.', vi: 'Hệ thống quản lý chất lượng quốc tế được áp dụng trên tất cả dây chuyền sản xuất.', jp: '全生産ラインに適用された国際品質管理システム。' },
@@ -130,9 +128,9 @@ const translations = {
 
   // ===================== ABOUT US PAGE =====================
   about_badge:     { en: 'Established 2012', vi: 'Thành Lập Năm 2012', jp: '2012年設立' },
-  about_h1_main:   { en: 'Forging the Future of', vi: 'Kiến Tạo Tương Lai Của Năng Lượng', jp: '未来を切り拓く' },
+  about_h1_main:   { en: 'Forging the Future of', vi: 'Kiến Tạo Tương Lai', jp: '未来を切り拓く' },
   about_h1_span:   { en: 'Sustainable', vi: 'Bền Vững', jp: '持続可能な' },
-  about_h1_end:    { en: 'Energy.', vi: '', jp: 'エネルギー。' },
+  about_h1_end:    { en: 'Energy.', vi: 'Năng Lượng.', jp: 'エネルギー。' },
   about_h1_p:      {
     en: 'About Us — DOHWA RESOURCE DEVELOPMENT is a global leader in high-performance wood pellet production, bridging heavy industry and environmental stewardship.',
     vi: 'Giới Thiệu — DOHWA RESOURCE DEVELOPMENT là doanh nghiệp dẫn đầu toàn cầu trong sản xuất viên nén gỗ hiệu suất cao, kết nối công nghiệp nặng và bảo vệ môi trường.',
@@ -150,6 +148,7 @@ const translations = {
   about_tech_p:          { en: 'Andritz heavy-duty machinery for precision compression.', vi: 'Máy móc hạng nặng Andritz cho nén chính xác.', jp: '精密圧縮のためのアンドリッツ重機。' },
   about_location_h4:     { en: 'Industrial Zone VI', vi: 'Khu Công Nghiệp VI', jp: '工業団地VI' },
   about_location_p:      { en: 'Binh Duong Province, Vietnam', vi: 'Tỉnh Bình Dương, Việt Nam', jp: 'ビンズオン省、ベトナム' },
+  about_state_of_art:    { en: 'State-of-the-art', vi: 'Hiện đại nhất', jp: '最先端' },
 
   about_vision_h3: { en: 'Our Vision', vi: 'Tầm Nhìn Của Chúng Tôi', jp: '私たちのビジョン' },
   about_vision_p:  {
@@ -195,6 +194,8 @@ const translations = {
   prod_ash:        { en: 'Ash Content', vi: 'Hàm Lượng Tro', jp: '灰分' },
   prod_moisture:   { en: 'Moisture', vi: 'Độ Ẩm', jp: '水分' },
   prod_caloric:    { en: 'Calorific Value', vi: 'Giá Trị Nhiệt Lượng', jp: '発熱量' },
+  prod_dry_basis:  { en: 'Dry Basis', vi: 'Căn Bản Khô', jp: '乾燥基準' },
+  prod_as_received:{ en: 'As Received', vi: 'Khi Nhận', jp: '受入時' },
 
   prod_chars_h3:   { en: 'Physical Characteristics', vi: 'Đặc Tính Vật Lý', jp: '物理的特性' },
   prod_texture_h4: { en: 'Texture', vi: 'Kết Cấu', jp: 'テクスチャー' },
@@ -215,7 +216,7 @@ const translations = {
   // ===================== CERTIFICATION PAGE =====================
   cert_badge:      { en: 'Global Standards', vi: 'Tiêu Chuẩn Toàn Cầu', jp: 'グローバル基準' },
   cert_h1:         { en: 'Sustainability &', vi: 'Bền Vững &', jp: '持続可能性と' },
-  cert_h1_line2:   { en: 'Technical Precision', vi: 'Độ Chính Xác Kỹ Thuật', jp: '技術的精度' },
+  cert_h1_line2:   { en: 'Technical Precision', vi: 'Chính Xác Kỹ Thuật', jp: '技術的精度' },
   cert_hero_p:     {
     en: 'Our commitment to international quality standards ensures that every shipment of wood pellets meets the most rigorous environmental and thermal efficiency criteria.',
     vi: 'Cam kết của chúng tôi với các tiêu chuẩn chất lượng quốc tế đảm bảo rằng mỗi lô hàng viên nén gỗ đều đáp ứng các tiêu chí môi trường và hiệu quả nhiệt nghiêm ngặt nhất.',
@@ -234,8 +235,11 @@ const translations = {
 
   cert_tech_h2:    { en: 'Technical Compliance', vi: 'Tuân Thủ Kỹ Thuật', jp: '技術的コンプライアンス' },
   cert_tech_p:     { en: 'Verified quality standards for global export.', vi: 'Tiêu chuẩn chất lượng được xác minh cho xuất khẩu toàn cầu.', jp: 'グローバル輸出のための検証済み品質基準。' },
+  cert_iso_h4:     { en: 'ISO 9001:2015', vi: 'ISO 9001:2015', jp: 'ISO 9001:2015' },
   cert_iso_p:      { en: 'Quality management systems ensuring consistent product output and customer satisfaction.', vi: 'Hệ thống quản lý chất lượng đảm bảo đầu ra sản phẩm nhất quán và sự hài lòng của khách hàng.', jp: '一貫した製品品質と顧客満足を確保する品質管理システム。' },
+  cert_sgs_h4:     { en: 'SGS Quality Analysis', vi: 'Phân Tích Chất Lượng SGS', jp: 'SGS品質分析' },
   cert_sgs_p:      { en: 'Independent lab verification of moisture content, ash percentage, and calorific value.', vi: 'Xác minh phòng thí nghiệm độc lập về hàm lượng độ ẩm, tỷ lệ tro và giá trị nhiệt lượng.', jp: '水分含有量、灰分率、発熱量の独立した実験室検証。' },
+  cert_vina_h4:    { en: 'VinaControl Verified', vi: 'VinaControl Đã Xác Minh', jp: 'VinaControl 検証済み' },
   cert_vina_p:     { en: "Local inspection certification ensuring compliance with Vietnam's export regulations.", vi: 'Chứng nhận kiểm tra tại địa phương đảm bảo tuân thủ quy định xuất khẩu của Việt Nam.', jp: 'ベトナムの輸出規制への準拠を確保する現地検査認証。' },
 
   cert_coc_h2:     { en: 'Chain of Custody (CoC) Process', vi: 'Quy Trình Chuỗi Hành Trình Sản Phẩm (CoC)', jp: '管理の連鎖（CoC）プロセス' },
@@ -267,12 +271,17 @@ const translations = {
   contact_phone:      { en: 'Phone Number', vi: 'Số Điện Thoại', jp: '電話番号' },
   contact_message:    { en: 'Message / Specific Requirements', vi: 'Tin Nhắn / Yêu Cầu Cụ Thể', jp: 'メッセージ / 具体的なご要望' },
   contact_msg_ph:     { en: 'Volume requirements, destination port, etc.', vi: 'Yêu cầu số lượng, cảng đích, v.v.', jp: '数量要件、仕向け港など' },
+  contact_name_ph:    { en: 'John Doe', vi: 'Nguyễn Văn A', jp: '山田太郎' },
+  contact_company_ph: { en: 'Industrial Corp', vi: 'Công Ty ABC', jp: '株式会社○○' },
+  contact_email_ph:   { en: 'contact@company.com', vi: 'lienhe@congty.com', jp: 'info@company.co.jp' },
+  contact_phone_ph:   { en: '+84 ...', vi: '+84 ...', jp: '+81 ...' },
   contact_submit:     { en: 'Submit Inquiry', vi: 'Gửi Yêu Cầu', jp: 'お問い合わせを送信' },
   contact_hq_h2:      { en: 'Factory Headquarters', vi: 'Trụ Sở Nhà Máy', jp: '工場本社' },
   contact_global_h4:  { en: 'Global Operations', vi: 'Hoạt Động Toàn Cầu', jp: 'グローバルオペレーション' },
-  contact_global_p:   { en: 'Near Hon La Seaport, Quang Trach District,\nQuang Binh Province, Vietnam', vi: 'Gần Cảng Hòn La, Huyện Quảng Trạch,\nTỉnh Quảng Bình, Việt Nam', jp: 'ホンラ港近郊、クアンチャック郡、\nクアンビン省、ベトナム' },
-  contact_email_h4:   { en: 'Electronic Mail', vi: 'Email', jp: '電子メール' },
+  contact_global_p:   { en: 'Near Hon La Seaport, Quang Trach District, Quang Binh Province, Vietnam', vi: 'Gần Cảng Hòn La, Huyện Quảng Trạch, Tỉnh Quảng Bình, Việt Nam', jp: 'ホンラ港近郊、クアンチャック郡、クアンビン省、ベトナム' },
+  contact_email_h4:   { en: 'Electronic Mail', vi: 'Thư Điện Tử', jp: '電子メール' },
   contact_phone_h4:   { en: 'Support Line', vi: 'Đường Dây Hỗ Trợ', jp: 'サポートライン' },
+  contact_map_label:  { en: 'DOHWA FACTORY', vi: 'NHÀ MÁY DOHWA', jp: 'DOHWA工場' },
 };
 
 // ===================== ENGINE =====================
@@ -292,7 +301,12 @@ function applyTranslations(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (translations[key] && translations[key][lang] !== undefined) {
-      el.textContent = translations[key][lang];
+      // Handle special case for elements with HTML children we want to preserve
+      if (el.dataset.i18nHtml) {
+        el.innerHTML = translations[key][lang];
+      } else {
+        el.textContent = translations[key][lang];
+      }
     }
   });
 
