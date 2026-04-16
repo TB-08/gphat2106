@@ -67,7 +67,9 @@ const translations = {
 
   // ===================== INDEX PAGE =====================
   idx_badge:       { en: "Vietnam's Leading Manufacturer", vi: 'Nhà Sản Xuất Hàng Đầu Việt Nam', jp: 'ベトナムのトップメーカー' },
-  idx_hero_h1:     { en: 'tons/year capacity', vi: 'tấn/năm công suất', jp: 'トン/年の生産能力' },
+  idx_hero_h1:     { en: '<span class="text-3xl md:text-5xl lg:text-7xl block mt-2 text-zinc-300">tons/year capacity</span>', 
+                     vi: '<span class="text-3xl md:text-5xl lg:text-7xl block mt-2 text-zinc-300">Tấn/Năm Công Suất</span>', 
+                     jp: '<span class="text-3xl md:text-5xl lg:text-7xl block mt-2 text-zinc-300">トン/年の生産能力</span>' },
   idx_hero_p:      {
     en: 'Leading Wood Pellet Manufacturer in Vietnam, driving global energy transitions with industrial scale and organic precision.',
     vi: 'Nhà sản xuất viên nén gỗ hàng đầu Việt Nam, thúc đẩy chuyển đổi năng lượng toàn cầu với quy mô công nghiệp và độ chính xác hữu cơ.',
